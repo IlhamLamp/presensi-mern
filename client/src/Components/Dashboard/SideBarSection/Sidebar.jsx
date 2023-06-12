@@ -1,6 +1,7 @@
 import React from 'react'
 import './sidebar.css'
 import logo from '../../../Assets/logo.png'
+import LogoSekolah from '../../../Assets/logo-sekolah.png'
 import { BsQuestionCircle } from 'react-icons/bs'
 import { AiFillSchedule, AiFillFolderAdd, AiFillBank, AiFillDashboard, AiFillCamera } from 'react-icons/ai'
 import { BiLogOutCircle } from 'react-icons/bi'
@@ -10,8 +11,9 @@ const Sidebar = () => {
     <div className='sideBar grid'>
 
       <div className="logoDiv flex">
-        <img src={logo} alt="Logo" />
-        <h2>Planti.</h2>
+        {/* <img src={logo} alt="Logo" /> */}
+        <img src={LogoSekolah} alt="Logo" />
+        <h2>Smadu.</h2>
       </div>
 
       <div className="menuDiv">
@@ -39,7 +41,7 @@ const Sidebar = () => {
           </li>
 
           <li className="listItem">
-            <a href="#" className="menuLink flex">
+            <a href="/dashboard/kelas" className="menuLink flex">
               <AiFillBank className="icon" />
               <span className="smallText">
                 Kelas
@@ -48,7 +50,7 @@ const Sidebar = () => {
           </li>
 
           <li className="listItem">
-            <a href="#" className="menuLink flex">
+            <a href="/dashboard/laporan" className="menuLink flex">
               <AiFillSchedule className="icon" />
               <span className="smallText">
                 Laporan
@@ -57,7 +59,7 @@ const Sidebar = () => {
           </li>
 
           <li className="listItem">
-            <a href="#" className="menuLink flex">
+            <a href="/dashboard/data-siswa" className="menuLink flex">
               <AiFillFolderAdd className="icon" />
               <span className="smallText">
                 Data Siswa

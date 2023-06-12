@@ -1,6 +1,9 @@
 import './App.css';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Kehadiran from './Components/Dashboard/Kehadiran';
+import Kelas from './Components/Dashboard/Kelas';
+import Laporan from './Components/Dashboard/Laporan';
+import DataSiswa from './Components/Dashboard/DataSiswa';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import {
@@ -24,7 +27,20 @@ const router = createBrowserRouter([
   {
     path: '/dashboard/kehadiran',
     element: <div><Kehadiran/></div>
-  }
+  },
+  {
+    path: '/dashboard/kelas',
+    element: <div><Kelas/></div>
+  },
+  {
+    path: '/dashboard/laporan',
+    element: <div><Laporan/></div>
+  },
+  {
+    path: '/dashboard/data-siswa',
+    element: <div><DataSiswa/></div>
+  },
+
 ])
 
 function App() {
