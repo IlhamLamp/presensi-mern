@@ -1,11 +1,9 @@
 import React from 'react'
 import './sidebar.css'
 import logo from '../../../Assets/logo.png'
-import { IoMdSpeedometer } from 'react-icons/io'
-import { MdDeliveryDining, MdOutlineExplore, MdOutlinePermContactCalendar } from 'react-icons/md'
-import { BsTrophy, BsCreditCard2Front, BsQuestionCircle } from 'react-icons/bs'
-import { AiOutlinePieChart } from 'react-icons/ai'
-import { BiTrendingUp, BiLogOutCircle } from 'react-icons/bi'
+import { BsQuestionCircle } from 'react-icons/bs'
+import { AiFillSchedule, AiFillFolderAdd, AiFillBank, AiFillDashboard, AiFillCamera } from 'react-icons/ai'
+import { BiLogOutCircle } from 'react-icons/bi'
 
 const Sidebar = () => {
   return (
@@ -23,8 +21,8 @@ const Sidebar = () => {
         <ul className="menuLists grid">
 
           <li className="listItem">
-            <a href="#" className="menuLink flex">
-              <IoMdSpeedometer className="icon" />
+            <a href="/dashboard" className="menuLink flex">
+              <AiFillDashboard className="icon" />
               <span className="smallText">
                 Dashboard
               </span>
@@ -32,28 +30,37 @@ const Sidebar = () => {
           </li>
 
           <li className="listItem">
-            <a href="#" className="menuLink flex">
-              <MdDeliveryDining className="icon" />
+            <a href="/dashboard/kehadiran" className="menuLink flex">
+              <AiFillCamera className="icon" />
               <span className="smallText">
-                My Orders
+                Kehadiran
               </span>
             </a>
           </li>
 
           <li className="listItem">
             <a href="#" className="menuLink flex">
-              <MdOutlineExplore className="icon" />
+              <AiFillBank className="icon" />
               <span className="smallText">
-                Explore
+                Kelas
               </span>
             </a>
           </li>
 
           <li className="listItem">
             <a href="#" className="menuLink flex">
-              <BsTrophy className="icon" />
+              <AiFillSchedule className="icon" />
               <span className="smallText">
-                Products
+                Laporan
+              </span>
+            </a>
+          </li>
+
+          <li className="listItem">
+            <a href="#" className="menuLink flex">
+              <AiFillFolderAdd className="icon" />
+              <span className="smallText">
+                Data Siswa
               </span>
             </a>
           </li>
@@ -66,42 +73,6 @@ const Sidebar = () => {
           SETTINGS
         </h3>
         <ul className="menuLists grid">
-
-          <li className="listItem">
-            <a href="#" className="menuLink flex">
-              <AiOutlinePieChart className="icon" />
-              <span className="smallText">
-                Charts
-              </span>
-            </a>
-          </li>
-
-          <li className="listItem">
-            <a href="#" className="menuLink flex">
-              <BiTrendingUp className="icon" />
-              <span className="smallText">
-                Trends
-              </span>
-            </a>
-          </li>
-
-          <li className="listItem">
-            <a href="#" className="menuLink flex">
-              <MdOutlinePermContactCalendar className="icon" />
-              <span className="smallText">
-                Contact
-              </span>
-            </a>
-          </li>
-
-          <li className="listItem">
-            <a href="#" className="menuLink flex">
-              <BsCreditCard2Front className="icon" />
-              <span className="smallText">
-                Billing
-              </span>
-            </a>
-          </li>
 
           <li className="listItem">
             <a href="/" className="menuLink flex">

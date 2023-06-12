@@ -1,5 +1,6 @@
 import './App.css';
 import Dashboard from './Components/Dashboard/Dashboard';
+import Kehadiran from './Components/Dashboard/Kehadiran';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
     path: '/dashboard',
     element: <div><Dashboard /></div>
   },
+  {
+    path: '/dashboard/kehadiran',
+    element: <div><Kehadiran/></div>
+  }
 ])
 
 function App() {
