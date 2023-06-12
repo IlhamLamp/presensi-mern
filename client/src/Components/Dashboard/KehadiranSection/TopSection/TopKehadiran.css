@@ -32,47 +32,7 @@
   color: var(--textColor);
   font-weight: 500;
 }
-.topSection .headerSection .searchBar {
-  padding: 1rem 2rem;
-  background: var(--whiteColor);
-  border-radius: 5px;
-  gap: 1rem;
-  box-shadow: 0 2px 4px var(--inputColor);
-}
-.topSection .headerSection .searchBar input {
-  border: none;
-  outline: none;
-  background: none;
-}
-.topSection .headerSection .searchBar .icon {
-  color: var(--textColor);
-}
-.topSection .headerSection .searchBar .icon:hover {
-  color: var(--PrimaryColor);
-}
-.topSection .headerSection .adminDiv {
-  gap: 1rem;
-}
-.topSection .headerSection .adminDiv .icon {
-  font-size: var(--biggestFontSize);
-  background: var(--whiteColor);
-  border-radius: 5px;
-  padding: 5px;
-  box-shadow: 0 2px 4px var(--inputColor);
-  color: var(--textColor);
-}
-.topSection .headerSection .adminDiv .adminImage {
-  border: 3px solid var(--whiteColor);
-  border-radius: 10px;
-  width: 2.5rem;
-  overflow: hidden;
-  box-shadow: 0 2px 4px var(--inputColor);
-}
-.topSection .headerSection .adminDiv .adminImage img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
+
 .topSection .cardSection {
   margin-top: 3rem;
   gap: 1rem;
@@ -321,6 +281,7 @@
   .cardSection .leftCard .main .imgDiv {
     display: none;
   }
+  
 }
 @media screen and (max-width: 390px) {
   .topSection .cardSection .rightCard {

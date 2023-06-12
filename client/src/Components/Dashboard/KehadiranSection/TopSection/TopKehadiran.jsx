@@ -5,6 +5,7 @@ import Hadir from './Popup/Hadir'
 
 const TopK = () => {
 
+  // popup
   const [buttonPopup, setButtonPopup] = useState(false);
 
   return (
@@ -31,9 +32,9 @@ const TopK = () => {
               <span className="flex link" onClick={() => setButtonPopup(true)}>
                 Klik Disini <BsArrowRightShort className="icon" />
               </span>
-          {/* POPUP */}
-        <Hadir trigger={buttonPopup} setTrigger={setButtonPopup}></Hadir>
-        {/*  */}
+              {/* POPUP */}
+              <Hadir trigger={buttonPopup} setTrigger={setButtonPopup}></Hadir>
+              {/*  */}
             </div>
           </div>
         </div>
