@@ -27,14 +27,14 @@ const ListingKelas = () => {
           <AiOutlineHeart className="icon" />
           <img src={img} alt="Image Name" />
           <h3>Coffe Plant</h3>
-          <p>Hadir</p>
+          <p>Belum Hadir</p>
         </div>
 
         <div className="singleItem">
           <AiOutlineHeart className="icon" />
           <img src={img} alt="Image Name" />
           <h3>Button Fern</h3>
-          <p>Hadir</p>
+          <p>Belum Hadir</p>
         </div>
 
         <div className="singleItem">
@@ -52,7 +52,7 @@ const ListingKelas = () => {
         </div>
         
         <div className="singleItem">
-          <AiFillHeart className="icon" />
+          <AiOutlineHeart className="icon" />
           <img src={img} alt="Image Name" />
           <h3>Spider Plant</h3>
         </div>
@@ -74,6 +74,13 @@ const ListingKelas = () => {
           <img src={img} alt="Image Name" />
           <h3>Spider Plant</h3>
         </div>
+        
+        <div className="singleItem">
+          <AiOutlineHeart className="icon" />
+          <img src={img} alt="Image Name" />
+          <h3>Spider Plant</h3>
+        </div>
+
         
         <div className="singleItem">
           <AiFillHeart className="icon" />
@@ -83,14 +90,7 @@ const ListingKelas = () => {
 
         
         <div className="singleItem">
-          <AiFillHeart className="icon" />
-          <img src={img} alt="Image Name" />
-          <h3>Spider Plant</h3>
-        </div>
-
-        
-        <div className="singleItem">
-          <AiFillHeart className="icon" />
+          <AiOutlineHeart className="icon" />
           <img src={img} alt="Image Name" />
           <h3>Spider Plant</h3>
         </div>
