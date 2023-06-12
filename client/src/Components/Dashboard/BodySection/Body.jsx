@@ -1,5 +1,5 @@
 import React from 'react'
-import './body.css'
+import '../BodyContent.css'
 import Top from './TopSection/Top'
 import Listing from './ListingSection/Listing'
 import Activity from './ActivitySection/Activity'

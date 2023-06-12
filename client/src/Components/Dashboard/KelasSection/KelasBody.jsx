@@ -1,5 +1,5 @@
 import React from 'react'
-import './kelasBody.css'
+import '../BodyContent.css'
 import TopKelas from './TopSection/TopKelas'
 import ListingKelas from './ListingSection/ListingKelas'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import './kehadiranBody.css'
+import '../BodyContent.css'
 import TopKehadiran from './TopSection/TopKehadiran'
 
 const Body = () => {

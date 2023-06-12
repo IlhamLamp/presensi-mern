@@ -1,5 +1,5 @@
 import React from 'react'
-import './dataSiswaBody.css'
+import '../BodyContent.css'
 import TopDataSiswa from './TopSection/TopDataSiswa' 
 
 const DataSiswaBody = () => {
