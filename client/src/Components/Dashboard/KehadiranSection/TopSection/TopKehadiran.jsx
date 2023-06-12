@@ -45,7 +45,7 @@ const TopK = () => {
               <h1>Izin</h1>
               <div className="flex">
                 <span>
-                  Tulis Keterangan <br />
+                  Tulis Keterangan kamu<br />
                 </span>
               </div>
               <span className="flex link">
@@ -61,7 +61,7 @@ const TopK = () => {
               <h1>Sakit</h1>
               <div className="flex">
                 <span>
-                  Tulis Keterangan <br />
+                  Tulis Keterangan kamu<br />
                 </span>
               </div>
               <span className="flex link">
@@ -77,7 +77,7 @@ const TopK = () => {
               <h1>Dispensasi</h1>
               <div className="flex">
                 <span>
-                  Tulis Keterangan <br />
+                  Tulis Keterangan kamu<br />
                 </span>
               </div>
               <span className="flex link">

@@ -17,10 +17,16 @@
     width: 100%;
     max-width: 640px;
     background-color: #fff;
+    text-align: center;
 }
 
 .hadir-inner .close-btn {
     position: absolute;
     top: 16px;
     right: 16px;
+}
+
+.popup-btn button {
+    padding: 5px;
+    margin: 10px;
 }
