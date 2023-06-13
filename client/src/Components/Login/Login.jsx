@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import './Login.css';
 import '../../App.css'
 import { Link, useNavigate } from 'react-router-dom';
 import Axios from 'axios'
 import video from '../../Assets/video.mp4'
-import logo from '../../Assets/logo.png'
+import logo from '../../Assets/logo-sekolah.png'
 import { FaUserShield } from 'react-icons/fa'
 import { BsFillShieldLockFill } from 'react-icons/bs'
 import { AiOutlineSwapRight } from 'react-icons/ai'
@@ -55,10 +54,9 @@ const Login = () => {
 
                 <div className="videoDiv">
                     <video src={video} autoPlay muted loop></video>
-
                     <div className="textDiv">
-                        <h2 className="title">Create And Sell Extraordinary Products</h2>
-                        <p>Adopt the peace of nature!</p>
+                        <h2 className="title">SMAN 2 CIBITUNG</h2>
+                        <p>SISTEM PRESENSI</p>
                     </div>
 
                     <div className="footerDiv flex">
@@ -71,8 +69,8 @@ const Login = () => {
 
                 <div className="formDiv flex">
                     <div className="headerDiv">
-                        <img src={logo} alt="Logo Image" />
-                        <h3>Welcome Back!</h3>
+                        <img src={logo} alt="Logo Image"/>
+                        <h3>Selamat Datang</h3>
                     </div>
 
                     <form action="" className="form grid" onSubmit={onSubmit}>

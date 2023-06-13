@@ -63,8 +63,7 @@ li {
   cursor: pointer;
 }
 
-img,
-video {
+img, video {
   height: auto;
   width: 100%;
 }
@@ -192,8 +191,8 @@ video {
 }
 .loginPage .container .videoDiv .footerDiv .btn,
 .registerPage .container .videoDiv .footerDiv .btn {
-  background: var(--whiteColor);
-  color: var(--primaryColor);
+  background: var(--cardKehadiranColor);
+  color: var(--blackColor);
   padding: 0.8rem 1.5rem;
   border-radius: 10px;
   font-weight: 400;
@@ -201,8 +200,8 @@ video {
 }
 .loginPage .container .videoDiv .footerDiv .btn:hover,
 .registerPage .container .videoDiv .footerDiv .btn:hover {
-  background: var(--hoverColor);
-  color: var(--blackColor);
+  background: var(--yrielYellow);
+  color: var(--PrimColor);
 }
 .loginPage .container .formDiv,
 .registerPage .container .formDiv {
@@ -221,6 +220,7 @@ video {
 .registerPage .container .formDiv .headerDiv img {
   width: 60px;
   padding-bottom: 0.5rem;
+  border-radius: 100px;
 }
 .loginPage .container .formDiv .headerDiv h3,
 .registerPage .container .formDiv .headerDiv h3 {
@@ -261,7 +261,7 @@ video {
 .loginPage .container .formDiv .form .btn,
 .registerPage .container .formDiv .form .btn {
   padding: 0.8rem;
-  background: var(--primaryColor);
+  background: var(--PrimColor);
   border-radius: 10px;
   color: var(--whiteColor);
   align-items: center;
@@ -279,7 +279,7 @@ video {
 }
 .loginPage .container .formDiv .form .btn:hover,
 .registerPage .container .formDiv .form .btn:hover {
-  background: var(--hoverColor);
+  background: var(--HovColor);
   color: var(--blackColor);
 }
 .loginPage .container .formDiv .form .btn:hover .icon,
