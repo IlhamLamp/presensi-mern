@@ -185,8 +185,8 @@
 .topSection .cardSection .leftCard .main .textDiv .flex small {
   font-size: var(--normalFontSize);
   display: block;
-  color: var(--blackColor);
-  font-weight: 500;
+  color: var(--linkText);
+  font-weight: bold;
   padding: 0.5rem 0;
 }
 .topSection .cardSection .leftCard .main .textDiv .link {

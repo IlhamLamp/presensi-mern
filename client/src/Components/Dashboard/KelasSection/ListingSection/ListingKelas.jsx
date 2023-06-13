@@ -18,80 +18,80 @@ const ListingKelas = () => {
         <div className="singleItem">
           <AiFillHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Annual Vince</h3>
+          <h3>Aida Nur Haqiqi	</h3>
           <p>Hadir</p>
         </div>
 
         <div className="singleItem">
           <AiOutlineHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Coffe Plant</h3>
+          <h3>Alya Islamiati Putri	</h3>
           <p>Belum Hadir</p>
         </div>
 
         <div className="singleItem">
           <AiOutlineHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Button Fern</h3>
+          <h3>Aprila Avriani</h3>
           <p>Belum Hadir</p>
         </div>
 
         <div className="singleItem">
           <AiFillHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Spider Plant</h3>
+          <h3>Belda Nurmultiefa</h3>
           <p>Hadir</p>
         </div>
 
         <div className="singleItem">
           <AiFillHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Spider Plant</h3>
+          <h3>Bella Febriani</h3>
           <p>Hadir</p>
         </div>
         
         <div className="singleItem">
           <AiOutlineHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Spider Plant</h3>
+          <h3>Bita Kausari</h3>
         </div>
         
         <div className="singleItem">
           <AiFillHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Spider Plant</h3>
+          <h3>Candra Permana</h3>
         </div>
         
         <div className="singleItem">
           <AiFillHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Spider Plant</h3>
+          <h3>Cynthia Detifiany</h3>
         </div>
         
         <div className="singleItem">
           <AiFillHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Spider Plant</h3>
+          <h3>Danindra Armina</h3>
         </div>
         
         <div className="singleItem">
           <AiOutlineHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Spider Plant</h3>
+          <h3>Denanda Fauziah</h3>
         </div>
 
         
         <div className="singleItem">
           <AiFillHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Spider Plant</h3>
+          <h3>Devi Sri Wahyuni</h3>
         </div>
 
         
         <div className="singleItem">
           <AiOutlineHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Spider Plant</h3>
+          <h3>Diky Ginanjar	</h3>
         </div>
       </div>
     </div>

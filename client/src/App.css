@@ -97,7 +97,8 @@ img, video {
   cursor: pointer;
   border-radius: 8px;
   padding: 0.8rem 1rem;
-  color: var(--greyText);
+  color: var(--whiteColor);
+  background-color: var(--PrimColor);
 }
 
 .btn .icon {
@@ -105,8 +106,8 @@ img, video {
 }
 
 .btn:hover {
-  color: var(--primaryColor);
-  background: var(--paleGreen);
+  color: var(--PrimColor);
+  background: var(--whiteColor);
 }
 .loginPage,
 .registerPage {
