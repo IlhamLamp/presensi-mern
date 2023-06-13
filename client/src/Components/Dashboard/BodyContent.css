@@ -1,8 +1,13 @@
+:root {
+  --bodyContentColor: #ffde5927;
+}
+
 .mainContent {
     width: 82%;
     height: 100%;
     padding: 2rem;
     overflow: auto;
+    background-color: var(--bodyContentColor);
   }
   .mainContent .bottom {
     margin-top: 2rem;
