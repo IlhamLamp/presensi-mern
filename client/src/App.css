@@ -11,7 +11,6 @@
   --hoverColor: hsl(93, 75%, 76%);
   --paleGreen: hsl(96, 75%, 89%);
   --whiteColor: hsl(0, 0%, 100%);
-  --blackColor: hsl(0, 0%, 18%);
   --greyText: hsl(0, 0%, 75%);
   --bgColor: hsl(113, 11%, 85%);
   --inputColor: hsl(330, 12%, 97%);
@@ -32,6 +31,7 @@
   --sideBgColor: #ffde599f;
   --whiteColor: hsl(0, 0%, 100%);
   --bodyContentColor: #ffde5927;
+  --cardKehadiranColor: #ffbf48bb;
 
 }
 
@@ -107,7 +107,6 @@ video {
   color: var(--primaryColor);
   background: var(--paleGreen);
 }
-
 .loginPage,
 .registerPage {
   height: 100vh;

@@ -1,5 +1,4 @@
 import React from 'react'
-import './topDataSiswa.css'
 import { BiSearchAlt } from 'react-icons/bi'
 import { TbMessageCircle } from 'react-icons/tb'
 import { MdOutlineNotificationsNone } from 'react-icons/md'

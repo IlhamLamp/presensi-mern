@@ -40,7 +40,6 @@ const router = createBrowserRouter([
     path: '/dashboard/data-siswa',
     element: <div><DataSiswa/></div>
   },
-
 ])
 
 function App() {

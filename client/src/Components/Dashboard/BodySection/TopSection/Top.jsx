@@ -1,12 +1,11 @@
 import React from 'react'
-import './top.css'
+import './Top.css'
 import { BiSearchAlt } from 'react-icons/bi'
 import { TbMessageCircle } from 'react-icons/tb'
 import { MdOutlineNotificationsNone } from 'react-icons/md'
 import { BsArrowRightShort, BsQuestionCircle } from 'react-icons/bs'
 import img from '../../../../Assets/gilbert.jpg'
 import img2 from '../../../../Assets/images (2).png'
-import video from '../../../../Assets/video.mp4'
 import Zenitsu from '../../../../Assets/Zenitsu.gif'
 
 const Top = () => {

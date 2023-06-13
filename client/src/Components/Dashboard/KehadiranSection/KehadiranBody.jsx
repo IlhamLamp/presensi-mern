@@ -7,7 +7,7 @@ const Body = () => {
     <div className='mainContent'>
       <TopKehadiran/>
       <div className="bottom flex">
-        Helo lin
+        Status Kehadiranmu hari ini : HADIR
       </div>
     </div>
   )

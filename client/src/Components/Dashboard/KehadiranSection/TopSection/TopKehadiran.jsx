@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BsArrowRightShort } from 'react-icons/bs'
+import { BsArrowRightShort, BsFillCameraFill, BsPersonFillExclamation, BsCapsule, BsClockFill } from 'react-icons/bs'
 import Hadir from './Popup/Hadir'
 
 const TopKehadiran = () => {
@@ -22,10 +22,11 @@ const TopKehadiran = () => {
         <div className="leftCard flex">
           <div className="main flex">
             <div className="textDiv">
+              <BsFillCameraFill className='icon'/>
               <h1>Hadir</h1>
               <div className="flex">
                 <span>
-                  Menggunakan Kamera <br /> <small>Beri Izin</small>
+                  Beri Izin<br /> <small>Menggunakan Kamera</small>
                 </span>
               </div>
               <span className="flex link" onClick={() => setButtonPopup(true)}>
@@ -41,6 +42,7 @@ const TopKehadiran = () => {
         <div className="leftCard flex">
           <div className="main flex">
             <div className="textDiv">
+              <BsPersonFillExclamation className='icon'/>
               <h1>Izin</h1>
               <div className="flex">
                 <span>
@@ -57,6 +59,7 @@ const TopKehadiran = () => {
         <div className="leftCard flex">
           <div className="main flex">
             <div className="textDiv">
+              <BsCapsule className='icon'/>
               <h1>Sakit</h1>
               <div className="flex">
                 <span>
@@ -73,6 +76,7 @@ const TopKehadiran = () => {
         <div className="leftCard flex">
           <div className="main flex">
             <div className="textDiv">
+              <BsClockFill className='icon'/>
               <h1>Dispensasi</h1>
               <div className="flex">
                 <span>

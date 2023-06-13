@@ -147,12 +147,24 @@
   border-radius: 1rem;
   justify-content: space-between;
 }
+/* CUSTOM HERE */
+.topSection .cardSection .leftCard .main .imgDiv {
+  transform: translateY(-20px);
+}
+.topSection .cardSection .leftCard .main .imgDiv img {
+  max-width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px;
+}
+/*  */
 .topSection .cardSection .leftCard .main::before {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
-  background: var(--paleGreen);
+  background: var(--cardKehadiranColor);
   left: 0;
   bottom: 0;
   border-radius: 1rem;
@@ -173,7 +185,7 @@
 .topSection .cardSection .leftCard .main .textDiv .flex small {
   font-size: var(--normalFontSize);
   display: block;
-  color: var(--PrimaryColor);
+  color: var(--blackColor);
   font-weight: 500;
   padding: 0.5rem 0;
 }
@@ -182,7 +194,7 @@
   cursor: pointer;
 }
 .topSection .cardSection .leftCard .main .textDiv .link:hover {
-  color: var(--PrimaryColor);
+  color: var(--whiteColor);
 }
 .topSection .cardSection .leftCard .main .textDiv .link:hover .icon {
   transform: translateX(10px);

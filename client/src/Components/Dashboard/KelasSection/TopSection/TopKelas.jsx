@@ -1,5 +1,4 @@
 import React from 'react'
-import './topKelas.css'
 import { BiSearchAlt } from 'react-icons/bi'
 import img from '../../../../Assets/wali-kelas.jpg'
 
