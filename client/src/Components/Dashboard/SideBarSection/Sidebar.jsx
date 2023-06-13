@@ -1,6 +1,5 @@
 import React from 'react'
 import './sidebar.css'
-import logo from '../../../Assets/logo.png'
 import LogoSekolah from '../../../Assets/logo-sekolah.png'
 import { BsQuestionCircle } from 'react-icons/bs'
 import { AiFillSchedule, AiFillFolderAdd, AiFillBank, AiFillDashboard, AiFillCamera } from 'react-icons/ai'
@@ -10,18 +9,21 @@ const Sidebar = () => {
   return (
     <div className='sideBar grid'>
 
+      {/* LOGO */}
       <div className="logoDiv flex">
-        {/* <img src={logo} alt="Logo" /> */}
         <img src={LogoSekolah} alt="Logo" />
         <h2>Smadu.</h2>
       </div>
 
+      {/* QUICK MENU */}
       <div className="menuDiv">
         <h3 className="divTitle">
-          QUICK MENU
+          MENU CEPAT
         </h3>
-        <ul className="menuLists grid">
 
+        {/* MENU COMPONENT */}
+        <ul className="menuLists grid">
+          {/*  */}
           <li className="listItem">
             <a href="/dashboard" className="menuLink flex">
               <AiFillDashboard className="icon" />
@@ -30,7 +32,7 @@ const Sidebar = () => {
               </span>
             </a>
           </li>
-
+          {/*  */}
           <li className="listItem">
             <a href="/dashboard/kehadiran" className="menuLink flex">
               <AiFillCamera className="icon" />
@@ -39,7 +41,7 @@ const Sidebar = () => {
               </span>
             </a>
           </li>
-
+          {/*  */}
           <li className="listItem">
             <a href="/dashboard/kelas" className="menuLink flex">
               <AiFillBank className="icon" />
@@ -48,7 +50,7 @@ const Sidebar = () => {
               </span>
             </a>
           </li>
-
+          {/*  */}
           <li className="listItem">
             <a href="/dashboard/laporan" className="menuLink flex">
               <AiFillSchedule className="icon" />
@@ -57,7 +59,7 @@ const Sidebar = () => {
               </span>
             </a>
           </li>
-
+          {/*  */}
           <li className="listItem">
             <a href="/dashboard/data-siswa" className="menuLink flex">
               <AiFillFolderAdd className="icon" />
@@ -69,13 +71,13 @@ const Sidebar = () => {
         </ul>
       </div>
 
-
+      {/* SETTINGS */}
       <div className="settingsDiv">
         <h3 className="divTitle">
-          SETTINGS
+          PENGATURAN
         </h3>
         <ul className="menuLists grid">
-
+          {/*  */}
           <li className="listItem">
             <a href="/" className="menuLink flex">
               <BiLogOutCircle className="icon" />
@@ -92,10 +94,9 @@ const Sidebar = () => {
         <div className="cardContent">
           <div className="circle1"></div>
           <div className="circle2"></div>
-
-          <h3>Help Center</h3>
-          <p>Having trouble in Planti, please contact us from for more questions.</p>
-          <button className="btn">Go to help center</button>
+          <h3>Pusat Bantuan</h3>
+          <p>Mengalami masalah di Presensi SMADU? silahkan hubungi kami untuk pertanyaan lebih lanjut.</p>
+          <button className="btn">Klik Disini</button>
         </div>
       </div>
     </div>
