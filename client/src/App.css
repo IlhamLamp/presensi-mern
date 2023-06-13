@@ -32,7 +32,9 @@
   --whiteColor: hsl(0, 0%, 100%);
   --bodyContentColor: #ffde5927;
   --cardKehadiranColor: #ffbf48bb;
-
+  --cardListingKelas: #f6e58d;
+  --cardListingKelasHover: #ffbe76;
+  --cardKelasBox: #ffbe76;
 }
 
 .flex {

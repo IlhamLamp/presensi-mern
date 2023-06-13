@@ -1,8 +1,7 @@
 import React from 'react'
-import './listingKelas.css'
 import { BsArrowDownShort } from 'react-icons/bs'
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
-import img from '../../../../Assets/images (1).png'
+import img from '../../../../Assets/user.png'
 
 const ListingKelas = () => {
   return (
