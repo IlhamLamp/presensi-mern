@@ -18,7 +18,7 @@ const Sidebar = () => {
       {/* QUICK MENU */}
       <div className="menuDiv">
         <h3 className="divTitle">
-          MENU CEPAT
+          • MENU CEPAT •	
         </h3>
 
         {/* MENU COMPONENT */}
@@ -74,7 +74,7 @@ const Sidebar = () => {
       {/* SETTINGS */}
       <div className="settingsDiv">
         <h3 className="divTitle">
-          PENGATURAN
+        •	PENGATURAN •	
         </h3>
         <ul className="menuLists grid">
           {/*  */}

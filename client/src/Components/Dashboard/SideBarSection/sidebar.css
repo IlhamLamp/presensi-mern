@@ -1,26 +1,22 @@
 :root {
-  --PrimaryColor: hsl(94, 59%, 35%);
-  --HoverColor: #bdf094;
-  --paleGreen: hsl(96, 75%, 89%);
+  /* Custom Color */
+  --PrimColor: #ffa801;
+  --HovColor: #ffd32a;
+  --yrielYellow: #ffdd59;
+  --blackColor: #1e272e;
+  --linkText: #422f0a;
+  --sideBgColor: #ffde599f;
   --whiteColor: hsl(0, 0%, 100%);
-  --blackColor: hsl(0, 0%, 18%);
-  --textColor: hsl(240, 1%, 48%);
-  --bgColor: hsl(220, 10%, 94%);
-  --greyText: rgb(190, 190, 190);
-  --inputColor: hsl(330, 12%, 97%);
   /* Font ang Typography */
-  --biggestFontSize: 2.5rem;
   --h1FontSize: 1.5rem;
   --h2FontSize: 1.25rem;
   --h3FontSize: 1rem;
   --normalFontSize: .938rem;
-  --smallFontSize: .813rem;
-  --smallestFontSize: .75rem;
 }
 
 .sideBar {
-  background: var(--whiteColor);
-  box-shadow: 1px 0px 4px var(--greyText);
+  background: var(--sideBgColor);
+  box-shadow: 1px 0px 4px var(--linkText);
   width: 18%;
   height: 100%;
   gap: 3rem;
@@ -33,13 +29,15 @@
 .sideBar .logoDiv img {
   max-width: 20px;
   margin-right: 0.5rem;
-  background: var(--inputColor);
-  border-radius: 2px;
+  border-radius: 10px;
   padding: 0.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
 }
 .sideBar .logoDiv h2 {
   font-size: var(--h2FontSize);
-  color: var(--PrimaryColor);
+  color: var(--PrimColor);
+  text-shadow: 2px 2px 5px var(--whiteColor);
 }
 .sideBar .menuDiv .divTitle,
 .sideBar .settingsDiv .divTitle {
@@ -63,11 +61,11 @@
   bottom: 0;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background: var(--PrimaryColor);
+  background: var(--PrimColor);
 }
 .sideBar .menuDiv .menuLists .listItem .menuLink,
 .sideBar .settingsDiv .menuLists .listItem .menuLink {
-  color: var(--greyText);
+  color: var(--linkText);
   font-weight: 500;
   transition: 0;
 }
@@ -77,7 +75,7 @@
 }
 .sideBar .menuDiv .menuLists .listItem:hover .menuLink,
 .sideBar .settingsDiv .menuLists .listItem:hover .menuLink {
-  color: var(--PrimaryColor);
+  color: var(--PrimColor);
   transition: 0;
 }
 .sideBar .menuDiv .menuLists .listItem:hover::before,
@@ -93,7 +91,7 @@
 }
 .sideBar .sideBarCard .icon {
   position: absolute;
-  background: var(--HoverColor);
+  background: var(--HovColor);
   border: 10px solid var(--whiteColor);
   font-size: 3rem;
   border-radius: 50%;
@@ -105,7 +103,7 @@
 .sideBar .sideBarCard .cardContent {
   position: relative;
   padding: 1rem;
-  background: var(--HoverColor);
+  background: var(--HovColor);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -118,19 +116,19 @@
 }
 .sideBar .sideBarCard .cardContent p {
   font-size: var(--normalFontSize);
-  color: var(--textColor);
+  color: var(--blackColor);
   padding-bottom: 1rem;
   font-weight: 500;
 }
 .sideBar .sideBarCard .cardContent .btn {
   position: relative;
-  color: var(--textColor);
+  color: var(--blackColor);
   z-index: 1000;
 }
 .sideBar .sideBarCard .cardContent .circle1,
 .sideBar .sideBarCard .cardContent .circle2 {
   position: absolute;
-  background: var(--paleGreen);
+  background: var(--yrielYellow);
   border-radius: 50%;
   opacity: 0.7;
 }
