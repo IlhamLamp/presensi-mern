@@ -1,7 +1,7 @@
 import React from 'react'
 import './topKelas.css'
 import { BiSearchAlt } from 'react-icons/bi'
-import img2 from '../../../../Assets/wali-kelas.jpg'
+import img from '../../../../Assets/wali-kelas.jpg'
 
 const Top = () => {
   return (
@@ -32,14 +32,10 @@ const Top = () => {
                 <span>Wali Kelas</span>
                 <span><small>10MIPA1</small></span>
               </div>
-
-              {/* <span className="flex link">
-                Go to my orders <BsArrowRightShort className="icon" />
-              </span> */}
             </div>
 
             <div className="imgDiv">
-              <img src={img2} alt="Image Name" />
+              <img src={img} alt="Image Name" />
             </div>
             {/* We Shall use this card later */}
           </div>

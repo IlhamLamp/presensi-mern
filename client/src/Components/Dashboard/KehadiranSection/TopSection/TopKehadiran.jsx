@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import './TopKehadiran.css'
 import { BsArrowRightShort } from 'react-icons/bs'
 import Hadir from './Popup/Hadir'
 
-const TopK = () => {
+const TopKehadiran = () => {
 
   // popup
   const [buttonPopup, setButtonPopup] = useState(false);
@@ -92,4 +91,4 @@ const TopK = () => {
   )
 }
 
-export default TopK
+export default TopKehadiran

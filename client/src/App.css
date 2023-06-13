@@ -23,6 +23,16 @@
   --normalFontSize: .938rem;
   --smallFontSize: .813rem;
   --smallestFontSize: .75rem;
+  /* Custom Color */
+  --PrimColor: #ffa801;
+  --HovColor: #ffd32a;
+  --yrielYellow: #ffdd59;
+  --blackColor: #1e272e;
+  --linkText: #422f0a;
+  --sideBgColor: #ffde599f;
+  --whiteColor: hsl(0, 0%, 100%);
+  --bodyContentColor: #ffde5927;
+
 }
 
 .flex {
