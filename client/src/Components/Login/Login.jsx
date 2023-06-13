@@ -56,7 +56,7 @@ const Login = () => {
                     <video src={video} autoPlay muted loop></video>
                     <div className="textDiv">
                         <h2 className="title">SMAN 2 CIBITUNG</h2>
-                        <p>SISTEM PRESENSI</p>
+                        <p>Kp,sasakbakar,Desa,Kec.Kab Kertamukti Cibitung, Bekasi, Kertamukti, Kec. Cibitung</p>
                     </div>
 
                     <div className="footerDiv flex">
