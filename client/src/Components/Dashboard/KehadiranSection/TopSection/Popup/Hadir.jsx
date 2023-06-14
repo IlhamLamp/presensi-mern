@@ -22,9 +22,9 @@ function Hadir(props) {
   return (props.trigger) ? (
     <div className="hadir">
         <div className="hadir-inner">
-            {showButton && <button onClick={openWebcam}>Buka Kamera</button>}
+            {showButton && <button onClick={openWebcam} className='btnOpenCam'>Buka Kamera</button>}
             {showWebcam && <PopUpWebcam handleClose={closeWebcam} />}
-            <button className="close-btn" onClick={()=> props.setTrigger(false)}>Tutup</button>
+            <button className="close-btn btnDelete" onClick={()=> props.setTrigger(false)}>Tutup</button>
             { props.children }
         </div>
     </div>

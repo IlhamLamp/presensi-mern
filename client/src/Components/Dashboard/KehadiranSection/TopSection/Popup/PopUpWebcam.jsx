@@ -17,8 +17,8 @@ const PopUpWebcam = ({ handleClose }) => {
         <h2>Pastikan Gambar Terlihat Jelas</h2>
         <Webcam audio={false} ref={webcamRef} screenshotFormat="image/jpeg"/>
         <div className='popup-btn'>
-          <button onClick={captureImage}>Ambil Gambar</button>
-          <button onClick={handleClose}>Kembali</button>
+          <button className='btnAdd' onClick={captureImage}>Ambil Gambar</button>
+          <button className='btnOpenCam' onClick={handleClose}>Kembali</button>
         </div>
         {capturedImage && (
           <div>
