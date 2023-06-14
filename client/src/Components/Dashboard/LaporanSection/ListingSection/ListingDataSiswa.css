@@ -1,0 +1,103 @@
+.app {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    justify-content: center;
+  }
+
+  form input {
+    text-align: center;
+    border: none;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(114, 114, 113, 0.5);
+  }
+
+  th,
+  td {
+    padding: 8px;
+    color: var(--blackColor);
+  }
+
+  tr.even {
+    background-color: var(--twinkleColor);
+  }
+
+  tr.odd {
+    background-color: var(--whiteColor);
+  }
+  
+  th {
+    background-color: var(--cardKehadiranColor);
+  }
+  
+  button {
+    padding: 6px 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 0.5rem;
+    color: var(--whiteColor);
+  }
+
+  .btnAdd {
+    background-color: var(--btnAdd);
+  }
+  .btnAdd:hover {
+    background-color: var(--btnAddHover);
+  }
+
+  .btnUpdate {
+    background-color: var(--btnUpdate);
+  }
+  .btnUpdate:hover {
+    background-color: var(--btnUpdateHover);
+  }
+
+  .btnDelete {
+    background-color: var(--btnDelete);
+  }
+  .btnDelete:hover {
+    background-color: var(--btnDeleteHover);
+  }
+
+  .student-table {
+    margin-bottom: 20px;
+  }
+
+  .student-table .btnAction button {
+    margin: 4px;
+  }
+  
+  .form-container {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--cardKehadiranColor);
+    border-radius: 15px;
+  }
+
+  .formInputSiswa {
+    background: var(--whiteColor);
+    border-radius: 5px;
+    gap: 1rem;
+    box-shadow: 4px var(--inputColor);
+  }
