@@ -47,7 +47,7 @@ const Listing = () => {
         </div>
       </div>
 
-      <div className="sellers flex">
+      {/* <div className="sellers flex">
         <div className="topSellers">
           <div className="heading flex">
             <h3>Top Sellers</h3>
@@ -99,7 +99,7 @@ const Listing = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

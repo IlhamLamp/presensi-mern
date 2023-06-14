@@ -1,17 +1,13 @@
 import React from 'react'
 import './activity.css'
 import { BsArrowRightShort } from 'react-icons/bs'
-import user from '../../../../Assets/aldi.jpg'
-import user1 from '../../../../Assets/dadang.jpg'
-import user2 from '../../../../Assets/gilbert.jpg'
-import user3 from '../../../../Assets/aldi.jpg'
-import user4 from '../../../../Assets/dadang.jpg'
+import user from '../../../../Assets/user.png'
 
 const Activity = () => {
   return (
     <div className="activitySection">
       <div className="heading flex">
-        <h1>Resent Activity</h1>
+        <h1>Kehadiran Terakhir</h1>
         <button className="btn flex">
           See All
           <BsArrowRightShort className="icon" />
@@ -22,8 +18,8 @@ const Activity = () => {
         <div className="singleCustomer flex">
           <img src={user} alt="Customer Image" />
           <div className="customerDetails">
-            <span className="name">Gilbert Hutapea</span>
-            <small>Ordered a new plant</small>
+            <span className="name">Mangifera</span>
+            <small>hadir</small>
           </div>
           <div className="duration">
             2 min ago
@@ -31,45 +27,45 @@ const Activity = () => {
         </div>
 
         <div className="singleCustomer flex">
-          <img src={user1} alt="Customer Image" />
+          <img src={user} alt="Customer Image" />
           <div className="customerDetails">
-            <span className="name">Gilbert Hutapea</span>
-            <small>Ordered a new plant</small>
+            <span className="name">Mangifera</span>
+            <small>hadir</small>
           </div>
           <div className="duration">
-            2 min ago
+            3 min ago
           </div>
         </div>
 
         <div className="singleCustomer flex">
-          <img src={user2} alt="Customer Image" />
+          <img src={user} alt="Customer Image" />
           <div className="customerDetails">
-            <span className="name">Gilbert Hutapea</span>
-            <small>Ordered a new plant</small>
+            <span className="name">Mangifera</span>
+            <small>hadir</small>
           </div>
           <div className="duration">
-            2 min ago
+            5 min ago
           </div>
         </div>
 
         <div className="singleCustomer flex">
-          <img src={user3} alt="Customer Image" />
+          <img src={user} alt="Customer Image" />
           <div className="customerDetails">
-            <span className="name">Gilbert Hutapea</span>
-            <small>Ordered a new plant</small>
+            <span className="name">Mangifera</span>
+            <small>hadir</small>
           </div>
           <div className="duration">
-            2 min ago
+            7 min ago
           </div>
         </div>
         <div className="singleCustomer flex">
-          <img src={user4} alt="Customer Image" />
+          <img src={user} alt="Customer Image" />
           <div className="customerDetails">
-            <span className="name">Gilbert Hutapea</span>
-            <small>Ordered a new plant</small>
+            <span className="name">Mangifera</span>
+            <small>hadir</small>
           </div>
           <div className="duration">
-            2 min ago
+            10 min ago
           </div>
         </div>
       </div>
