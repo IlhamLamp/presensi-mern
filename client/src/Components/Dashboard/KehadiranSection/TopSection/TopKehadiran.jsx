@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { BsArrowRightShort, BsFillCameraFill, BsPersonFillExclamation, BsCapsule, BsClockFill } from 'react-icons/bs'
+import Clock from './Clock'
 import Hadir from './Popup/Hadir'
 
 const TopKehadiran = () => {
@@ -13,6 +14,9 @@ const TopKehadiran = () => {
         <div className="title">
           <h1>Menu Kehadiran Siswa.</h1>
           <p>Pilih Menu dibawah ini!</p>
+        </div>
+        <div className="searchBar flex">
+          <Clock className="clock" />
         </div>
       </div>
 
