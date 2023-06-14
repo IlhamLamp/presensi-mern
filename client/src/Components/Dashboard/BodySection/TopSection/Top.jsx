@@ -1,26 +1,27 @@
 import React from 'react'
 import './Top.css'
-import { BiSearchAlt } from 'react-icons/bi'
+// import { BiSearchAlt } from 'react-icons/bi'
 import { TbMessageCircle } from 'react-icons/tb'
 import { MdOutlineNotificationsNone } from 'react-icons/md'
 import { BsArrowRightShort, BsQuestionCircle } from 'react-icons/bs'
+import Clock from './Clock'
 import img from '../../../../Assets/gilbert.jpg'
 import img2 from '../../../../Assets/images (2).png'
-import Zenitsu from '../../../../Assets/Zenitsu.gif'
+import Zenitsu from '../../../../Assets/hello.gif'
 
 const Top = () => {
   return (
     <div className="topSection">
       <div className="headerSection flex">
         <div className="title">
-          <h1>Welcome to Planti.</h1>
-          <p>Hello Gilbert, Welcome back!</p>
+          <h1><span className="smaduTitle">Sistem Presensi SMADU.</span></h1>
+          <p>Selamat datang, User!</p>
         </div>
 
-        <div className="searchBar flex">
+        {/* <div className="searchBar flex">
           <input type="text" placeholder='Search Dashboard' />
           <BiSearchAlt className="icon" />
-        </div>
+        </div> */}
 
         <div className="adminDiv flex">
           <TbMessageCircle className="icon" />
@@ -34,13 +35,13 @@ const Top = () => {
 
       <div className="cardSection flex">
         <div className="rightCard flex">
-          <h1>Create and sell extraordinary products</h1>
-          <p>The world's fast growing industry today are natural made products!</p>
+          <h1><Clock/></h1>
+          {/* <p>The world's fast growing industry today are natural made products!</p> */}
 
-          <div className="buttons flex">
+          {/* <div className="buttons flex">
             <button className="btn">Explore More</button>
             <button className="btn transparent">Top Sellers</button>
-          </div>
+          </div> */}
 
           <div className="videoDiv">
             {/* <video src={video} autoPlay loop muted></video> */}
@@ -52,20 +53,22 @@ const Top = () => {
           <div className="main flex">
 
             <div className="textDiv">
-              <h1>My Stat</h1>
+              <h1>Status Kehadiran</h1>
 
               <div className="flex">
                 <span>
-                  Today <br /> <small>4 Orders</small>
+                  Hari Ini <br /> <small>Hadir</small>
                 </span>
                 <span>
-                  This Month <br /> <small>175 Orders</small>
+                  Catatan <br /> <small>-</small>
                 </span>
               </div>
 
-              <span className="flex link">
-                Go to my orders <BsArrowRightShort className="icon" />
-              </span>
+              <a href="/dashboard/kehadiran" className="menuLink">
+                <span className="flex link">
+                  Absen dengan foto <BsArrowRightShort className="icon" />
+                </span>
+              </a>
             </div>
 
             <div className="imgDiv">

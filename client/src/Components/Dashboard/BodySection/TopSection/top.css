@@ -26,7 +26,9 @@
   font-size: var(--h1FontSize);
   color: var(--blackColor);
   font-weight: 700;
-  /* text-align: left; */
+}
+.topSection .headerSection .title h1 .smaduTitle{
+  font-size: var(--biggestFontSize);
 }
 .topSection .headerSection .title p {
   font-size: var(--normalFontSize);
