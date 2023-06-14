@@ -30,11 +30,18 @@
   --linkText: #422f0a;
   --sideBgColor: #ffde599f;
   --whiteColor: hsl(0, 0%, 100%);
+  --twinkleColor: #f1f2f6;
   --bodyContentColor: #ffde5927;
   --cardKehadiranColor: #ffbf48bb;
   --cardListingKelas: #f6e58d;
   --cardListingKelasHover: #ffbe76;
   --cardKelasBox: #ffbe76;
+  --btnAdd: #3742fa;
+  --btnAddHover: #5352ed;
+  --btnDelete: #ff4757;
+  --btnDeleteHover: #ff6348;
+  --btnUpdate: #2ed573;
+  --btnUpdateHover: #7bed9f;
 }
 
 .flex {

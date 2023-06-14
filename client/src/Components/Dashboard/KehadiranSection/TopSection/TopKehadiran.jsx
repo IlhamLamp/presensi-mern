@@ -26,7 +26,7 @@ const TopKehadiran = () => {
               <h1>Hadir</h1>
               <div className="flex">
                 <span>
-                  Beri Izin<br />Menggunakan Kamera
+                  Menggunakan Kamera
                 </span>
               </div>
               <span className="flex link" onClick={() => setButtonPopup(true)}>

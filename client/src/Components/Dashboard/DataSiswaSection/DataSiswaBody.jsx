@@ -67,11 +67,12 @@ const DataSiswaBody = () => {
           <div className="form-container">
             {editData ? 
               (
-              <div>
-                <h2>Edit Siswa</h2>
+              <div className='table-container'>
+                <h2>Edit Data Siswa</h2>
                 <form>
                   <input
                     type="text"
+                    className="formInputSiswa"
                     name="nama"
                     placeholder="Masukkan Nama"
                     value={formData.nama}
@@ -79,6 +80,7 @@ const DataSiswaBody = () => {
                   />
                   <input
                     type="text"
+                    className="formInputSiswa"
                     name="kelas"
                     placeholder="Masukkan Kelas"
                     value={formData.kelas}
@@ -86,22 +88,24 @@ const DataSiswaBody = () => {
                   />
                   <input
                     type="text"
+                    className="formInputSiswa"
                     name="nisn"
                     placeholder="Masukkan Nisn"
                     value={formData.nisn}
                     onChange={handleInputChange}
                   />
-                  <button type="button" onClick={handleUpdateStudent}>
+                  <button className='btnUpdate' type="button" onClick={handleUpdateStudent}>
                     Simpan
                   </button>
                 </form>
               </div>
               ) : (
-              <div>
+              <div className='table-container'>
                 <h2>Tambah Siswa</h2>
                 <form>
                   <input
                     type="text"
+                    className="formInputSiswa"
                     name="nama"
                     placeholder="Masukkan Nama"
                     value={formData.nama}
@@ -109,6 +113,7 @@ const DataSiswaBody = () => {
                   />
                   <input
                     type="text"
+                    className="formInputSiswa"
                     name="kelas"
                     placeholder="Masukkan Kelas"
                     value={formData.kelas}
@@ -116,13 +121,14 @@ const DataSiswaBody = () => {
                   />
                   <input
                     type="text"
+                    className="formInputSiswa"
                     name="nisn"
                     placeholder="Masukkan Nisn"
                     value={formData.nisn}
                     onChange={handleInputChange}
                   />
-                  <button type="button" onClick={handleAddStudent}>
-                    Tambah Siswa
+                  <button className='btnAdd' type="button" onClick={handleAddStudent}>
+                    Tambah
                   </button>
                 </form>
               </div>

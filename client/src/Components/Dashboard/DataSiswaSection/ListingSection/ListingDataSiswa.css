@@ -17,39 +17,65 @@
 
   form input {
     text-align: center;
+    border: none;
   }
-  
+
   table {
     width: 100%;
     border-collapse: collapse;
     text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(114, 114, 113, 0.5);
   }
-  
+
   th,
   td {
     padding: 8px;
-    border: 1px solid #ddd;
+    color: var(--blackColor);
+  }
+
+  tr.even {
+    background-color: var(--twinkleColor);
+  }
+
+  tr.odd {
+    background-color: var(--whiteColor);
   }
   
   th {
-    background-color: #f2f2f2;
-    text-align: left;
+    background-color: var(--cardKehadiranColor);
   }
   
   button {
     padding: 6px 12px;
-    background-color: #4caf50;
-    color: #fff;
     border: none;
+    outline: none;
     cursor: pointer;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    color: var(--whiteColor);
   }
-  
-  button:hover {
-    background-color: #45a049;
+
+  .btnAdd {
+    background-color: var(--btnAdd);
   }
-  
-  button:active {
-    background-color: #3e8e41;
+  .btnAdd:hover {
+    background-color: var(--btnAddHover);
+  }
+
+  .btnUpdate {
+    background-color: var(--btnUpdate);
+  }
+  .btnUpdate:hover {
+    background-color: var(--btnUpdateHover);
+  }
+
+  .btnDelete {
+    background-color: var(--btnDelete);
+  }
+  .btnDelete:hover {
+    background-color: var(--btnDeleteHover);
   }
 
   .student-table {
@@ -65,5 +91,13 @@
     background-color: #f9f9f9;
     padding: 20px;
     margin-bottom: 20px;
+    background-color: var(--cardKehadiranColor);
+    border-radius: 15px;
   }
-  
+
+  .formInputSiswa {
+    background: var(--whiteColor);
+    border-radius: 5px;
+    gap: 1rem;
+    box-shadow: 4px var(--inputColor);
+  }
