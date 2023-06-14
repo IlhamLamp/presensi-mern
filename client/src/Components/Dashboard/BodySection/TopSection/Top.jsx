@@ -1,12 +1,12 @@
 import React from 'react'
 import './Top.css'
 // import { BiSearchAlt } from 'react-icons/bi'
-import { TbMessageCircle } from 'react-icons/tb'
+// import { TbMessageCircle } from 'react-icons/tb'
 import { MdOutlineNotificationsNone } from 'react-icons/md'
 import { BsArrowRightShort, BsQuestionCircle } from 'react-icons/bs'
 import Clock from './Clock'
-import img from '../../../../Assets/gilbert.jpg'
-import img2 from '../../../../Assets/images (2).png'
+import img from '../../../../Assets/user.png'
+import img2 from '../../../../Assets/achievement.png'
 import Zenitsu from '../../../../Assets/hello.gif'
 
 const Top = () => {
@@ -24,7 +24,7 @@ const Top = () => {
         </div> */}
 
         <div className="adminDiv flex">
-          <TbMessageCircle className="icon" />
+          {/* <TbMessageCircle className="icon" /> */}
           <MdOutlineNotificationsNone className="icon" />
           <div className="adminImage">
             <img src={img} alt="Admin Image" />
