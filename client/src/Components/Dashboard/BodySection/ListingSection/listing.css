@@ -49,7 +49,7 @@
 }
 .lisitingSection .secContainer .singleItem {
   position: relative;
-  width: 150px;
+  width: 160px;
   height: 170px;
   display: flex;
   align-items: center;
@@ -75,7 +75,7 @@
 .lisitingSection .secContainer .singleItem h3 {
   font-size: var(--h3FontSize);
   color: var(--blackColor);
-  padding: 1rem 0;
+  padding: 0.8rem 0;
 }
 .lisitingSection .secContainer .singleItem p {
   font-size: var(--normalFontSize);

@@ -2,49 +2,43 @@ import React from 'react'
 import './listing.css'
 import { BsArrowRightShort } from 'react-icons/bs'
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
-import img from '../../../../Assets/images (1).png'
-// import img1 from '../../../Assets/images (9).png'
-// import img2 from '../../../Assets/images (8).png'
-// import img3 from '../../../Assets/images (10).png'
-import user1 from '../../../../Assets/aldi.jpg'
-import user2 from '../../../../Assets/dadang.jpg'
-import user3 from '../../../../Assets/gilbert.jpg'
-import user4 from '../../../../Assets/aldi.jpg'
+import img from '../../../../Assets/profile.png'
 
 const Listing = () => {
+
   return (
     <div className="lisitingSection">
       <div className="heading flex">
-        <h1>My Listings</h1>
-        <button className="btn flex">
-          See All <BsArrowRightShort className="icon" />
-        </button>
+        <h1>Kelas Saya</h1>
+        <a href="/dashboard/kelas">
+          <button className="btn flex">
+            See All <BsArrowRightShort className="icon"/>
+          </button>
+        </a>
       </div>
 
       <div className="secContainer flex">
         <div className="singleItem">
           <AiFillHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Annual Vince</h3>
+          <h3>Wali Kelas</h3>
+          <p>Dwi Reknowati, M.Pd</p>
         </div>
 
         <div className="singleItem">
           <AiOutlineHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Coffe Plant</h3>
+          <h3>Ketua Kelas</h3>
+          <p>Ayato</p>
         </div>
 
         <div className="singleItem">
           <AiOutlineHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Button Fern</h3>
+          <h3>Wakil Ketua</h3>
+          <p>Ayaka</p>
         </div>
 
-        <div className="singleItem">
-          <AiFillHeart className="icon" />
-          <img src={img} alt="Image Name" />
-          <h3>Spider Plant</h3>
-        </div>
       </div>
 
       {/* <div className="sellers flex">
