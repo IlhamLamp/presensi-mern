@@ -54,44 +54,49 @@ const ListingKelas = () => {
           <AiOutlineHeart className="icon" />
           <img src={img} alt="Image Name" />
           <h3>Bita Kausari</h3>
+          <p>Belum Hadir</p>
         </div>
         
         <div className="singleItem">
           <AiFillHeart className="icon" />
           <img src={img} alt="Image Name" />
           <h3>Candra Permana</h3>
+          <p>Hadir</p>
         </div>
         
         <div className="singleItem">
-          <AiFillHeart className="icon" />
+          <AiOutlineHeart className="icon" />
           <img src={img} alt="Image Name" />
           <h3>Cynthia Detifiany</h3>
+          <p>Belum Hadir</p>
         </div>
         
         <div className="singleItem">
           <AiFillHeart className="icon" />
           <img src={img} alt="Image Name" />
           <h3>Danindra Armina</h3>
+          <p>Hadir</p>
         </div>
-        
-        <div className="singleItem">
-          <AiOutlineHeart className="icon" />
-          <img src={img} alt="Image Name" />
-          <h3>Denanda Fauziah</h3>
-        </div>
-
         
         <div className="singleItem">
           <AiFillHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Devi Sri Wahyuni</h3>
+          <h3>Denanda Fauziah</h3>
+          <p>Hadir</p>
         </div>
 
+        <div className="singleItem">
+          <AiFillHeart className="icon" />
+          <img src={img} alt="Image Name" />
+          <h3>Devi Sri Wahyuni</h3>
+          <p>Hadir</p>
+        </div>
         
         <div className="singleItem">
-          <AiOutlineHeart className="icon" />
+          <AiFillHeart className="icon" />
           <img src={img} alt="Image Name" />
-          <h3>Diky Ginanjar	</h3>
+          <h3>Diky Ginanjar</h3>
+          <p>Hadir</p>
         </div>
       </div>
     </div>

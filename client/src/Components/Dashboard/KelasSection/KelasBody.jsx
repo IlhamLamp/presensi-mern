@@ -2,6 +2,7 @@ import React from 'react'
 import '../BodyContent.css'
 import TopKelas from './TopSection/TopKelas'
 import ListingKelas from './ListingSection/ListingKelas'
+import KelasActivity from './ActivitySection/Activity'
 
 const Body = () => {
   return (
@@ -9,6 +10,7 @@ const Body = () => {
       <TopKelas/>
       <div className="bottom flex">
         <ListingKelas/>
+        <KelasActivity/>
       </div>
     </div>
   )

@@ -8,7 +8,7 @@ const Top = () => {
       <div className="headerSection flex">
         <div className="title">
           <h1>Menu Data Harian Kelas.</h1>
-          <p>Lihat Data Kehadiranmu Hari Ini!</p>
+          <p>Lihat data kehadiranmu di kelas hari ini</p>
         </div>
 
         <div className="searchBar flex">
