@@ -2,9 +2,11 @@ import React, {useState} from 'react'
 import '../BodyContent.css'
 import TopDataSiswa from './TopSection/TopDataSiswa' 
 import ListingDataSiswa from './ListingSection/ListingDataSiswa'
+import studentsData from './StudentsData'
 
 const DataSiswaBody = () => {
-  const [students, setStudents] = useState([]);
+
+  const [students, setStudents] = useState(studentsData);
   const [formData, setFormData] = useState({ id: '', nama: '', kelas: '', nisn: '' });
   const [editData, setEditData] = useState(null);
 
