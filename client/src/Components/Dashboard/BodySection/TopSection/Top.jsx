@@ -14,7 +14,7 @@ const Top = () => {
     <div className="topSection">
       <div className="headerSection flex">
         <div className="title">
-          <h1><span className="smaduTitle">Sistem Presensi SMADU.</span></h1>
+          <h1><span className="smaduTitle">Sistem Presensi SMAN 2 Cibitung.</span></h1>
           <p>Selamat datang, User!</p>
         </div>
 

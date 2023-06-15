@@ -18,7 +18,7 @@ const Activity = () => {
         <div className="singleCustomer flex">
           <img src={user} alt="Customer Image" />
           <div className="customerDetails">
-            <span className="name">Mangifera</span>
+            <span className="name">Diky Ginanjar</span>
             <small>hadir</small>
           </div>
           <div className="duration">
@@ -29,7 +29,7 @@ const Activity = () => {
         <div className="singleCustomer flex">
           <img src={user} alt="Customer Image" />
           <div className="customerDetails">
-            <span className="name">Mangifera</span>
+            <span className="name">Denanda Fauziah</span>
             <small>hadir</small>
           </div>
           <div className="duration">
@@ -40,7 +40,7 @@ const Activity = () => {
         <div className="singleCustomer flex">
           <img src={user} alt="Customer Image" />
           <div className="customerDetails">
-            <span className="name">Mangifera</span>
+            <span className="name">Bella Febriani</span>
             <small>hadir</small>
           </div>
           <div className="duration">
@@ -48,10 +48,10 @@ const Activity = () => {
           </div>
         </div>
 
-        <div className="singleCustomer flex">
+        {/* <div className="singleCustomer flex">
           <img src={user} alt="Customer Image" />
           <div className="customerDetails">
-            <span className="name">Mangifera</span>
+            <span className="name">Danindra Armina</span>
             <small>hadir</small>
           </div>
           <div className="duration">
@@ -61,13 +61,13 @@ const Activity = () => {
         <div className="singleCustomer flex">
           <img src={user} alt="Customer Image" />
           <div className="customerDetails">
-            <span className="name">Mangifera</span>
+            <span className="name">Aprila Avriani</span>
             <small>hadir</small>
           </div>
           <div className="duration">
             10 min ago
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

@@ -29,14 +29,14 @@ const Listing = () => {
           <AiOutlineHeart className="icon" />
           <img src={img} alt="Image Name" />
           <h3>Ketua Kelas</h3>
-          <p>Ayato</p>
+          <p>Candra Permana</p>
         </div>
 
         <div className="singleItem">
           <AiOutlineHeart className="icon" />
           <img src={img} alt="Image Name" />
           <h3>Wakil Ketua</h3>
-          <p>Ayaka</p>
+          <p>Bella Febriani</p>
         </div>
 
       </div>
