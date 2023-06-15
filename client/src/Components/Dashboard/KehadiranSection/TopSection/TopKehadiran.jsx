@@ -13,7 +13,7 @@ const TopKehadiran = () => {
       <div className="headerSection flex">
         <div className="title">
           <h1>Menu Kehadiran Siswa.</h1>
-          <p>Pilih Menu dibawah ini!</p>
+          <p>Pilih menu berdasarkan kehadiran</p>
         </div>
         <div className="searchBar flex">
           <Clock className="clock" />
