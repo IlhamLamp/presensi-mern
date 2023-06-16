@@ -39,6 +39,7 @@ const AttendanceReport = () => {
       student.id,
       student.nama,
       student.hadir,
+      student.sakit,
       student.izin,
       student.alpa,
     ]);
