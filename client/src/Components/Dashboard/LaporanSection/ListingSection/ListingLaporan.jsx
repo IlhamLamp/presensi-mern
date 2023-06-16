@@ -1,7 +1,7 @@
 import React from 'react';
-import './ListingDataSiswa.css';
+import './ListingLaporan.css'
 
-const ListingDataSiswa = ({ students, onDelete, onEdit }) => {
+const ListingLaporan = ({ students, onDelete, onEdit }) => {
   return (
     <div className='tableBorder'>
         <table className="student-table">
@@ -35,4 +35,4 @@ const ListingDataSiswa = ({ students, onDelete, onEdit }) => {
   );
 };
 
-export default ListingDataSiswa;
+export default ListingLaporan;

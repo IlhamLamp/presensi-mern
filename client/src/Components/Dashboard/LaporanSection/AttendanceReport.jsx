@@ -67,7 +67,6 @@ const AttendanceReport = () => {
 
   return (
     <div>
-      <h2>Laporan Kehadiran Bulanan Siswa</h2>
       <select value={selectedMonth} onChange={handleMonthChange}>
         <option value="">Pilih Bulan</option>
         {attendanceData.map((data) => (

@@ -1,14 +1,14 @@
 import React from 'react'
 import { BiSearchAlt } from 'react-icons/bi'
 
-const TopDataSiswa = () => {
+const TopLaporan = () => {
 
   return (
     <div className="topSection">
       <div className="headerSection flex">
         <div className="title">
-          <h1>Menu Laporan Kehadiran.</h1>
-          <p>Pilih tanggal lalu unduh.</p>
+          <h1>Menu Laporan Kehadiran Bulanan Siswa.</h1>
+          <p>Pilih bulan lalu unduh.</p>
         </div>
 
         <div className="searchBar flex">
@@ -20,4 +20,4 @@ const TopDataSiswa = () => {
   )
 }
 
-export default TopDataSiswa
+export default TopLaporan
