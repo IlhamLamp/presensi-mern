@@ -29,8 +29,8 @@ app.post('/register', (req, res) => {
     const sentPassword = req.body.Password
 
     // Lets create SQL statement to insert the user to the Database table Users
-    const SQL = 'INSERT INTO siswa (, nisn, nama, kelas, password) VALUES (?,?,?,?,?)'
-    const Values = ['', sentNisn, sentNama, sentKelas, sentPassword]
+    const SQL = 'INSERT INTO siswa (nisn, nama, kelas, password) VALUES (?,?,?,?)'
+    const Values = [sentNisn, sentNama, sentKelas, sentPassword]
 
     // Query to execute the sql statement stated above
     db.query(SQL, Values, (err, results) => {
