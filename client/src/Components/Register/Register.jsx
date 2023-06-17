@@ -5,25 +5,28 @@ import video from '../../Assets/video.mp4'
 import logo from '../../Assets/logo-sekolah.png'
 import { FaUserShield } from 'react-icons/fa'
 import { BsFillShieldLockFill } from 'react-icons/bs'
-import { AiOutlineSwapRight } from 'react-icons/ai'
+import { AiOutlineSwapRight, AiFillBank } from 'react-icons/ai'
 import { MdMarkEmailRead } from 'react-icons/md'
 
 const Register = () => {
-    const [email, setEmail] = useState('')
-    const [userName, setUserName] = useState('')
+    const [nisn, setNisn] = useState('')
+    const [nama, setNama] = useState('')
+    const [kelas, setKelas] = useState('')
     const [password, setPassword] = useState('')
     const navigateTo = useNavigate();
 
-    const createUser = (e) => {
+    const createSiswa = (e) => {
         e.preventDefault()
         Axios.post('http://localhost:3002/register', {
-            Email: email,
-            UserName: userName,
+            Nisn: nisn,
+            Nama: nama,
+            Kelas: kelas,
             Password: password
         }).then(() => {
             navigateTo('/');
-            setEmail('');
-            setUserName('');
+            setNisn('');
+            setNama('');
+            setKelas('');
             setPassword('');
         })
     }
@@ -40,9 +43,9 @@ const Register = () => {
                     </div>
 
                     <div className="footerDiv flex">
-                        <span className="text">Have an account?</span>
+                        <span className="text">Sudah memiliki akun ?</span>
                         <Link to={'/'}>
-                            <button className="btn">Login</button>
+                            <button className="btn">Masuk</button>
                         </Link>
                     </div>
                 </div>
@@ -50,26 +53,35 @@ const Register = () => {
                 <div className="formDiv flex">
                     <div className="headerDiv">
                         <img src={logo} alt="Logo Image" />
-                        <h3>Let Us Know You!</h3>
+                        <h3>Halaman Registrasi Siswa</h3>
                     </div>
 
                     <form action="" className="form grid">
 
                         <div className="inputDiv">
-                            <label htmlFor="email">Email</label>
+                            <label htmlFor="nisn">NISN</label>
                             <div className="input flex">
                                 <MdMarkEmailRead className="icon" />
-                                <input type="email" id='email' placeholder='Enter Email'
-                                    onChange={(event) => setEmail(event.target.value)} />
+                                <input type="nisn" id='nisn' placeholder='Masukkan NISN'
+                                    onChange={(event) => setNisn(event.target.value)} />
                             </div>
                         </div>
 
                         <div className="inputDiv">
-                            <label htmlFor="username">Username</label>
+                            <label htmlFor="nama">Nama</label>
                             <div className="input flex">
                                 <FaUserShield className="icon" />
-                                <input type="text" id='username' placeholder='Enter Username'
-                                    onChange={(event) => setUserName(event.target.value)} />
+                                <input type="text" id='nama' placeholder='Masukkan Nama'
+                                    onChange={(event) => setNama(event.target.value)} />
+                            </div>
+                        </div>
+
+                        <div className="inputDiv">
+                            <label htmlFor="kelas">Kelas</label>
+                            <div className="input flex">
+                                <AiFillBank className="icon" />
+                                <input type="text" id='kelas' placeholder='Masukkan Kelas'
+                                    onChange={(event) => setKelas(event.target.value)} />
                             </div>
                         </div>
 
@@ -77,18 +89,18 @@ const Register = () => {
                             <label htmlFor="password">Password</label>
                             <div className="input flex">
                                 <BsFillShieldLockFill className="icon" />
-                                <input type="password" id='password' placeholder='Enter Password'
+                                <input type="password" id='password' placeholder='Masukkan Password'
                                     onChange={(event) => setPassword(event.target.value)} />
                             </div>
                         </div>
 
-                        <button type='submit' className='btn flex' onClick={createUser}>
-                            <span>Register</span>
+                        <button type='submit' className='btn flex' onClick={createSiswa}>
+                            <span>Daftar</span>
                             <AiOutlineSwapRight className="icon" />
                         </button>
 
                         <span className="forgotPassword">
-                            Forgot your password? <a href="">Click Here</a>
+                            Lupa Password? <a href="">Klik Disini</a>
                         </span>
 
                     </form>

@@ -23,13 +23,17 @@ const db = mysql.createConnection({
 // let us now create a route to the server that will register a user
 
 app.post('/register', (req, res) => {
-    const sentEmail = req.body.Email
-    const sentUserName = req.body.UserName
+    // const sentEmail = req.body.Email
+    // const sentUserName = req.body.UserName
+    // const sentPassword = req.body.Password
+    const sentNisn = req.body.Nisn
+    const sentNama = req.body.Nama
+    const sentKelas = req.body.Kelas
     const sentPassword = req.body.Password
 
     // Lets create SQL statement to insert the user to the Database table Users
-    const SQL = 'INSERT INTO users (email, username, password) VALUES (?,?,?)'
-    const Values = [sentEmail, sentUserName, sentPassword]
+    const SQL = 'INSERT INTO users (nisn, nama, kelas, password) VALUES (?,?,?)'
+    const Values = [sentNisn, sentNama, sentKelas, sentPassword]
 
     // Query to execute the sql statement stated above
     db.query(SQL, Values, (err, results) => {
@@ -37,8 +41,8 @@ app.post('/register', (req, res) => {
             res.send(err)
         }
         else {
-            console.log('User inserted successfully!');
-            res.send({ message: 'User added!' })
+            console.log('Siswa inserted successfully!');
+            res.send({ message: '🧑 Siswa baru telah ditambahkan !' })
         }
     })
 })

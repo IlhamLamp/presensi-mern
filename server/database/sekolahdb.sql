@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `siswa` (
   `id` int(11) NOT NULL,
   `nisn` varchar(100) NOT NULL,
+  `nama` varchar(100) NOT NULL,
   `kelas` varchar(100) NOT NULL,
-  `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -39,8 +39,8 @@ CREATE TABLE `siswa` (
 -- Dumping data for table `siswa`
 --
 
-INSERT INTO `siswa` (`id`, `nisn`, `kelas`, `username`, `password`) VALUES
-(1, '1234567890', 'XA1', 'admin', 'admin');
+INSERT INTO `siswa` (`id`, `nisn`, `nama`, `kelas`, `password`) VALUES
+(1, '1234567890', 'admin', 'XA1', 'admin');
 
 --
 -- Indexes for dumped tables
