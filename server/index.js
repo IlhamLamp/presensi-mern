@@ -17,7 +17,7 @@ const db = mysql.createConnection({
     user: 'root',
     host: 'localhost',
     password: '', //If you have set xampp password please enter it here
-    database: 'plantdb',
+    database: 'sekolahdb',
 })
 
 // let us now create a route to the server that will register a user
