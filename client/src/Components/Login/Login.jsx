@@ -11,7 +11,7 @@ import { AiOutlineSwapRight } from 'react-icons/ai'
 
 
 const Login = () => {
-    const [loginUserName, setLoginUserName] = useState('');
+    const [loginNisn, setLoginNisn] = useState('');
     const [loginPassword, setLoginPassword] = useState('');
     const navigateTo = useNavigate();
     const [loginStatus, setLoginStatus] = useState('');
@@ -20,15 +20,16 @@ const Login = () => {
     const loginUser = (e) => {
         e.preventDefault();
         Axios.post('http://localhost:3002/login', {
-            LoginUserName: loginUserName,
+            LoginNisn: loginNisn,
             LoginPassword: loginPassword
         }).then((response) => {
             console.log();
-            if (response.data.message || loginUserName == '' || loginPassword ==  '') {
+            if (response.data.message || loginNisn == '' || loginPassword ==  '') {
                 navigateTo('/') 
-                setLoginStatus(`Credentials Don't Exist!`)
+                setLoginStatus(`Username atau password salah!`)
             }
             else {
+                console.log ('Login Succesfully!')
                 navigateTo('/dashboard')
             }
         })
@@ -44,7 +45,7 @@ const Login = () => {
     }, [loginStatus])
 
     const onSubmit = () => {
-        setLoginUserName('')
+        setLoginNisn('')
         setLoginPassword('')
     }
 
@@ -60,9 +61,9 @@ const Login = () => {
                     </div>
 
                     <div className="footerDiv flex">
-                        <span className="text">Don't have an account?</span>
+                        <span className="text">Belum memiliki akun?</span>
                         <Link to={'/register'}>
-                            <button className="btn">Sign Up</button>
+                            <button className="btn">Daftar</button>
                         </Link>
                     </div>
                 </div>
@@ -70,18 +71,18 @@ const Login = () => {
                 <div className="formDiv flex">
                     <div className="headerDiv">
                         <img src={logo} alt="Logo Image"/>
-                        <h3>Selamat Datang</h3>
+                        <h3>Selamat Datang Siswa/i</h3>
                     </div>
 
                     <form action="" className="form grid" onSubmit={onSubmit}>
                         <span className={statusHolder}>{loginStatus}</span>
 
                         <div className="inputDiv">
-                            <label htmlFor="username">Username</label>
+                            <label htmlFor="nisn">NISN</label>
                             <div className="input flex">
                                 <FaUserShield className="icon" />
-                                <input type="text" id='username' placeholder='Enter Username'
-                                    onChange={(event) => setLoginUserName(event.target.value)} />
+                                <input type="text" id='nisn' placeholder='Masukkan NISN'
+                                    onChange={(event) => setLoginNisn(event.target.value)} />
                             </div>
                         </div>
 
@@ -89,18 +90,18 @@ const Login = () => {
                             <label htmlFor="password">Password</label>
                             <div className="input flex">
                                 <BsFillShieldLockFill className="icon" />
-                                <input type="password" id='password' placeholder='Enter Password'
+                                <input type="password" id='password' placeholder='Masukkan Password'
                                     onChange={(event) => setLoginPassword(event.target.value)} />
                             </div>
                         </div>
 
                         <button type='submit' className='btn flex' onClick={loginUser}>
-                            <span>Login</span>
+                            <span>Masuk</span>
                             <AiOutlineSwapRight className="icon" />
                         </button>
 
                         <span className="forgotPassword">
-                            Forgot your password? <a href="">Click Here</a>
+                            Lupa Password? <a href="">Klik Disini</a>
                         </span>
 
                     </form>

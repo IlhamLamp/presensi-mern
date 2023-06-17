@@ -23,17 +23,14 @@ const db = mysql.createConnection({
 // let us now create a route to the server that will register a user
 
 app.post('/register', (req, res) => {
-    // const sentEmail = req.body.Email
-    // const sentUserName = req.body.UserName
-    // const sentPassword = req.body.Password
     const sentNisn = req.body.Nisn
     const sentNama = req.body.Nama
     const sentKelas = req.body.Kelas
     const sentPassword = req.body.Password
 
     // Lets create SQL statement to insert the user to the Database table Users
-    const SQL = 'INSERT INTO users (nisn, nama, kelas, password) VALUES (?,?,?)'
-    const Values = [sentNisn, sentNama, sentKelas, sentPassword]
+    const SQL = 'INSERT INTO siswa (, nisn, nama, kelas, password) VALUES (?,?,?,?,?)'
+    const Values = ['', sentNisn, sentNama, sentKelas, sentPassword]
 
     // Query to execute the sql statement stated above
     db.query(SQL, Values, (err, results) => {
@@ -49,12 +46,12 @@ app.post('/register', (req, res) => {
 
 
 app.post('/login', (req, res) => {
-    const sentloginUserName = req.body.LoginUserName
+    const sentloginNisn = req.body.LoginNisn
     const sentLoginPassword = req.body.LoginPassword
 
     // Lets create SQL statement to insert the user to the Database table Users
-    const SQL = 'SELECT * FROM users WHERE username = ? && password = ?'
-    const Values = [sentloginUserName, sentLoginPassword]
+    const SQL = 'SELECT * FROM siswa WHERE nisn = ? && password = ?'
+    const Values = [sentloginNisn, sentLoginPassword]
 
         // Query to execute the sql statement stated above
         db.query(SQL, Values, (err, results) => {
