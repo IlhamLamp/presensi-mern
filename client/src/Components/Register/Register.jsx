@@ -60,7 +60,7 @@ const Register = () => {
 
                         <div className="inputDiv">
                             <label htmlFor="nisn">NISN</label>
-                            <div className="input flex">
+                            <div className="inputReg flex">
                                 <MdMarkEmailRead className="icon" />
                                 <input type="nisn" id='nisn' placeholder='Masukkan NISN'
                                     onChange={(event) => setNisn(event.target.value)} />
@@ -69,7 +69,7 @@ const Register = () => {
 
                         <div className="inputDiv">
                             <label htmlFor="nama">Nama</label>
-                            <div className="input flex">
+                            <div className="inputReg flex">
                                 <FaUserShield className="icon" />
                                 <input type="text" id='nama' placeholder='Masukkan Nama'
                                     onChange={(event) => setNama(event.target.value)} />
@@ -78,7 +78,7 @@ const Register = () => {
 
                         <div className="inputDiv">
                             <label htmlFor="kelas">Kelas</label>
-                            <div className="input flex">
+                            <div className="inputReg flex">
                                 <AiFillBank className="icon" />
                                 <input type="text" id='kelas' placeholder='Masukkan Kelas'
                                     onChange={(event) => setKelas(event.target.value)} />
@@ -87,7 +87,7 @@ const Register = () => {
 
                         <div className="inputDiv">
                             <label htmlFor="password">Password</label>
-                            <div className="input flex">
+                            <div className="inputReg flex">
                                 <BsFillShieldLockFill className="icon" />
                                 <input type="password" id='password' placeholder='Masukkan Password'
                                     onChange={(event) => setPassword(event.target.value)} />
