@@ -44,9 +44,11 @@ $ npm start (to start the server)
 
 ##  Key Features
 
-- User registration and login
-- Authentication using JWT Tokens
-- Responsive Design
+- [x] User registration and login
+- [x] Authentication using JWT Tokens
+- [x] Responsive Design
+- [x] Webcam Photo
+- [ ] All menu in sidebar connect to database _(in progress)_ 
 
 <br/>
 
