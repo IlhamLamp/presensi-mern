@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { jsPDF } from 'jspdf';
 import 'jspdf-autotable';
 import attendanceData from './attendanceData';
+import ListingLaporan from './ListingSection/ListingLaporan';
 
 const AttendanceReport = () => {
+  const [attendances, setAttendances] = useState(attendanceData)
   const [selectedMonth, setSelectedMonth] = useState('');
 
   const generatePDF = () => {
@@ -65,9 +67,14 @@ const AttendanceReport = () => {
     setSelectedMonth(event.target.value);
   };
 
+  // Filter data berdasarkan bulan yang dipilih
+  const filteredData = selectedMonth
+    ? attendanceData.find((item) => item.bulan === selectedMonth)?.data || []
+    : [];
+
   return (
-    <div>
-      <select value={selectedMonth} onChange={handleMonthChange}>
+    <div className='selected-month'>
+      <select value={selectedMonth} onChange={handleMonthChange} className='selectedContent selectedContentBtnOption'>
         <option value="">Pilih Bulan</option>
         {attendanceData.map((data) => (
           <option key={data.id} value={data.bulan}>
@@ -75,7 +82,16 @@ const AttendanceReport = () => {
           </option>
         ))}
       </select>
-      <button className='btnUpdate' onClick={generatePDF}>Unduh Laporan PDF</button>
+      <button className='btnUpdate selectedContent' onClick={generatePDF}>Unduh Laporan PDF</button>
+
+      {/* TABLE */}
+      <div className="app">
+          <div className="form-container">
+              <h3>Laporan Bulan {selectedMonth}</h3>
+              <br/>
+              <ListingLaporan attendances={filteredData}/>
+          </div>
+      </div>
     </div>
   );
 };

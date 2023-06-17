@@ -18,7 +18,7 @@ const Sidebar = () => {
       {/* QUICK MENU */}
       <div className="menuDiv">
         <h3 className="divTitle">
-          • MENU CEPAT •	
+          • MENU UTAMA •	
         </h3>
 
         {/* MENU COMPONENT */}
