@@ -73,15 +73,24 @@ This project was created using the following technologies.
 
 ####  Database 
 
- - [MySQL ](https://www.mysql.com/) - It provides a free cloud service to store MongoDB collections.
+ - [MySQL ](https://www.mysql.com/) - Makes it easier for new users to get started with the database.
 
  ##  Screenshots 
 
-![img-1](https://github.com/berthutapea/mern-login-register-dashboard/assets/111676859/f44c3e0e-a82b-4797-a1d5-e565337245d8)
----- -
-![img-2](https://github.com/berthutapea/mern-login-register-dashboard/assets/111676859/92131144-46a1-4b74-af0f-f817df506321)
+![img-1](/.github/assets/img1-login.png)
+--- -
+![img-2](/.github/assets/img2-register.png)
 --- - 
-![img-3](https://github.com/berthutapea/mern-login-register-dashboard/assets/111676859/6f6051df-6738-4f53-a977-4955825dbf11)
+![img-3](/.github/assets/img3-dashboard.png)
+--- - 
+![img-4](/.github/assets/img4-kehadiran.png)
+--- - 
+![img-5](/.github/assets/img5-kelas.png)
+--- - 
+![img-6](/.github/assets/img6-laporan.png)
+--- - 
+![img-7](/.github/assets/img7-siswa.png)
+
 <!-- ## Author
 - Portfolio: [berthutapea](https://berthutapea.vercel.app/)
 - Github: [berthutapea](https://github.com/berthutapea)
