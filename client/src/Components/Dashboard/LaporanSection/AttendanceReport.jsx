@@ -82,7 +82,7 @@ const AttendanceReport = () => {
           </option>
         ))}
       </select>
-      <button className='btnUpdate selectedContent' onClick={generatePDF}>Unduh Laporan PDF</button>
+      <button className='btnUpdate selectedContent' onClick={generatePDF}>Cetak Laporan</button>
 
       {/* TABLE */}
       <div className="app">

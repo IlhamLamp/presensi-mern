@@ -7,7 +7,8 @@ import { BsArrowRightShort, BsQuestionCircle } from 'react-icons/bs'
 import Clock from './Clock'
 import img from '../../../../Assets/user.png'
 import img2 from '../../../../Assets/achievement.png'
-import Zenitsu from '../../../../Assets/hello.gif'
+import video from '../../../../Assets/video.mp4'
+// import Zenitsu from '../../../../Assets/hello.gif'
 
 const Top = () => {
   return (
@@ -44,8 +45,8 @@ const Top = () => {
           </div> */}
 
           <div className="videoDiv">
-            {/* <video src={video} autoPlay loop muted></video> */}
-            <img src={Zenitsu}/>
+            <video src={video} autoPlay loop muted></video>
+            {/* <img src={Zenitsu}/> */}
           </div>
         </div>
 
