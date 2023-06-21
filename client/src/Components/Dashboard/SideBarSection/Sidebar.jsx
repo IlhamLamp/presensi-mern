@@ -6,6 +6,17 @@ import { AiFillSchedule, AiFillFolderAdd, AiFillBank, AiFillDashboard, AiFillCam
 import { BiLogOutCircle } from 'react-icons/bi'
 
 const Sidebar = () => {
+
+  const handleLogout = () => {
+    const confirmLogout = window.confirm('Yakin ingin logout?');
+    if (confirmLogout) {
+      // Logika logout
+      window.location.href = '/';
+    } else {
+      // Tidak melakukan apa-apa
+    }
+  };
+
   return (
     <div className='sideBar grid'>
 
@@ -79,9 +90,10 @@ const Sidebar = () => {
         <ul className="menuLists grid">
           {/*  */}
           <li className="listItem">
-            <a href="/" className="menuLink flex">
+            <a href="#" className="menuLink flex" onClick={handleLogout}>
               <BiLogOutCircle className="icon" />
-              <span className="smallText">
+              <span 
+                className="smallText">
                 Log Out
               </span>
             </a>
