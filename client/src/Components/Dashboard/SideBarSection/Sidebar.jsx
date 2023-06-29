@@ -90,7 +90,7 @@ const Sidebar = () => {
         <ul className="menuLists grid">
           {/*  */}
           <li className="listItem">
-            <a href="#" className="menuLink flex" onClick={handleLogout}>
+            <a href="#  " className="menuLink flex" onClick={handleLogout}>
               <BiLogOutCircle className="icon" />
               <span 
                 className="smallText">

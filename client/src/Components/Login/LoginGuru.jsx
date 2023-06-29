@@ -8,28 +8,26 @@ import { FaUserShield } from 'react-icons/fa'
 import { BsFillShieldLockFill } from 'react-icons/bs'
 import { AiOutlineSwapRight } from 'react-icons/ai'
 
-
-
-const Login = () => {
-    const [loginNisn, setLoginNisn] = useState('');
+const LoginGuru = () => {
+    const [loginNip, setLoginNip] = useState('');
     const [loginPassword, setLoginPassword] = useState('');
     const navigateTo = useNavigate();
     const [loginStatus, setLoginStatus] = useState('');
     const [statusHolder, setStatusHolder] = useState('message');
 
-    const loginSiswa = (e) => {
+    const loginGuru = (e) => {
         e.preventDefault();
-        Axios.post('http://localhost:3002/login', {
-            LoginNisn: loginNisn,
+        Axios.post('http://localhost:3002/guru', {
+            LoginNip: loginNip,
             LoginPassword: loginPassword
         }).then((response) => {
             console.log();
-            if (response.data.message || loginNisn == '' || loginPassword ==  '') {
-                navigateTo('/') 
-                setLoginStatus(`Nisn atau password salah!`)
+            if (response.data.message || loginNip == '' || loginPassword ==  '') {
+                navigateTo('/guru') 
+                setLoginStatus(`Nip atau password salah!`)
             }
             else {
-                console.log('Login Succesfully!')
+                console.log ('Login Succesfully!')
                 navigateTo('/dashboard')
             }
         })
@@ -45,7 +43,7 @@ const Login = () => {
     }, [loginStatus])
 
     const onSubmit = () => {
-        setLoginNisn('')
+        setLoginNip('')
         setLoginPassword('')
     }
 
@@ -71,18 +69,18 @@ const Login = () => {
                 <div className="formDiv flex">
                     <div className="headerDiv">
                         <img src={logo} alt="Logo Image"/>
-                        <h3>Halaman Login Siswa</h3>
+                        <h3>Halaman Login Guru</h3>
                     </div>
 
                     <form action="" className="form grid" onSubmit={onSubmit}>
                         <span className={statusHolder}>{loginStatus}</span>
 
                         <div className="inputDiv">
-                            <label htmlFor="nisn">NISN</label>
+                            <label htmlFor="nip">NIP</label>
                             <div className="input flex">
                                 <FaUserShield className="icon" />
-                                <input type="text" id='nisn' placeholder='Masukkan NISN'
-                                    onChange={(event) => setLoginNisn(event.target.value)} />
+                                <input type="text" id='nip' placeholder='Masukkan NIP'
+                                    onChange={(event) => setLoginNip(event.target.value)} />
                             </div>
                         </div>
 
@@ -95,7 +93,7 @@ const Login = () => {
                             </div>
                         </div>
 
-                        <button type='submit' className='btn flex' onClick={loginSiswa}>
+                        <button type='submit' className='btn flex' onClick={loginGuru}>
                             <span>Masuk</span>
                             <AiOutlineSwapRight className="icon" />
                         </button>
@@ -112,4 +110,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default LoginGuru

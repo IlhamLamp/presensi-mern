@@ -5,6 +5,7 @@ import Kelas from './Components/Dashboard/Kelas';
 import Laporan from './Components/Dashboard/Laporan';
 import DataSiswa from './Components/Dashboard/DataSiswa';
 import Login from './Components/Login/Login';
+import LoginGuru from './Components/Login/LoginGuru';
 import Register from './Components/Register/Register';
 import {
   createBrowserRouter,
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <div><Login /></div>
+  },
+  {
+    path: '/guru',
+    element: <div><LoginGuru/></div>
   },
   {
     path: '/register',

@@ -20,8 +20,6 @@ const db = mysql.createConnection({
     database: 'sekolahdb',
 })
 
-// let us now create a route to the server that will register a user
-
 app.post('/register', (req, res) => {
     const sentNisn = req.body.Nisn
     const sentNama = req.body.Nama
@@ -53,16 +51,38 @@ app.post('/login', (req, res) => {
     const SQL = 'SELECT * FROM siswa WHERE nisn = ? && password = ?'
     const Values = [sentloginNisn, sentLoginPassword]
 
-        // Query to execute the sql statement stated above
-        db.query(SQL, Values, (err, results) => {
-            if(err) {
-                res.send({error: err})
-            }
-            if(results.length > 0) {
-                res.send(results)
-            }
-            else{
-                res.send({message: `Credentials Don't match!`})
-            }
-        })
+    // Query to execute the sql statement stated above
+    db.query(SQL, Values, (err, results) => {
+        if(err) {
+            res.send({error: err})
+        }
+        if(results.length > 0) {
+            res.send(results)
+        }
+        else{
+            res.send({message: `Credentials Siswa Don't match!`})
+        }
+    })
+})
+
+app.post('/guru', (req, res) => {
+    const sentLoginNip = req.body.LoginNip
+    const sentLoginPassword = req.body.LoginPassword
+
+    // SQL Statement
+    const SQL = 'SELECT * FROM guru WHERE nip = ? && password = ?'
+    const Values = [sentLoginNip, sentLoginPassword]
+
+    // Query
+    db.query(SQL, Values, (err, results) => {
+        if(err) {
+            res.send({error: err})
+        }
+        if(results.length > 0) {
+            res.send(results)
+        }
+        else{
+            res.send({message: `Credentials Guru Don't Match!`})
+        }
+    })
 })
