@@ -36,7 +36,7 @@ const Top = () => {
             <div className="imgDiv">
               <img src={img} alt="Image Name" />
             </div>
-            {/* We Shall use this card later */}
+            
           </div>
         </div>
 
