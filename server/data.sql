@@ -40,3 +40,15 @@ INSERT INTO `guru`(`id`, `nip`, `nama`, `kelas_id`, `password`) VALUES ('18','19
 INSERT INTO `guru`(`id`, `nip`, `nama`, `kelas_id`, `password`) VALUES ('19','196778251','Endang Misbah Kurniawan, S.Pd., M.M','','endang');
 
 -- Siswa --
+INSERT INTO `siswa`(`id`, `nisn`, `nama`, `kelas_id`, `password`) VALUES ('1','235994','Aida Nur Haqiqi','1','aida');
+INSERT INTO `siswa`(`id`, `nisn`, `nama`, `kelas_id`, `password`) VALUES ('2','238816','Alya Islamiati Putri','1','alya');
+INSERT INTO `siswa`(`id`, `nisn`, `nama`, `kelas_id`, `password`) VALUES ('3','236723','Aprila Avriani','1','aprila');
+INSERT INTO `siswa`(`id`, `nisn`, `nama`, `kelas_id`, `password`) VALUES ('4','235417','Belda Nurmultiefa','1','belda');
+INSERT INTO `siswa`(`id`, `nisn`, `nama`, `kelas_id`, `password`) VALUES ('5','231923','Bella Febriani','1','bella');
+INSERT INTO `siswa`(`id`, `nisn`, `nama`, `kelas_id`, `password`) VALUES ('6','238152','Bita Kausari','1','bita');
+INSERT INTO `siswa`(`id`, `nisn`, `nama`, `kelas_id`, `password`) VALUES ('7','232543','Candra Permana','1','candra');
+INSERT INTO `siswa`(`id`, `nisn`, `nama`, `kelas_id`, `password`) VALUES ('8','233094','Cynthia Detifiany','1','cynthia');
+INSERT INTO `siswa`(`id`, `nisn`, `nama`, `kelas_id`, `password`) VALUES ('9','236594','Danindra Armina','1','danindra');
+INSERT INTO `siswa`(`id`, `nisn`, `nama`, `kelas_id`, `password`) VALUES ('10','236616','Denanda Fauziah','1','denanda');
+INSERT INTO `siswa`(`id`, `nisn`, `nama`, `kelas_id`, `password`) VALUES ('11','234403','Devi Sri Wahyuni','1','devi');
+INSERT INTO `siswa`(`id`, `nisn`, `nama`, `kelas_id`, `password`) VALUES ('12','235714','Diky Ginanjar','1','diky');
