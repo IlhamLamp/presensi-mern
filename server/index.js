@@ -56,7 +56,12 @@ app.post('/login', (req, res) => {
     const sentLoginPassword = req.body.LoginPassword
 
     // Lets create SQL statement to insert the user to the Database table Users
-    const SQL = 'SELECT * FROM siswa WHERE nisn = ? && password = ?'
+    // const SQL = 'SELECT * FROM siswa WHERE nisn = ? && password = ?'
+    const SQL = `SELECT siswa.*, kelas.kode_kelas, guru.nama AS nama_guru FROM siswa 
+                INNER JOIN kelas ON siswa.kelas_id = kelas.id 
+                INNER JOIN guru ON kelas.guru_id = guru.id 
+                WHERE siswa.nisn = ? AND siswa.password = ?`
+    ;
     const Values = [sentloginNisn, sentLoginPassword]
 
     // Query to execute the sql statement stated above

@@ -1,6 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './Top.css'
-import SiswaProfile from '../../../SiswaProfile'
 // import { BiSearchAlt } from 'react-icons/bi'
 // import { TbMessageCircle } from 'react-icons/tb'
 import { MdOutlineNotificationsNone } from 'react-icons/md'
@@ -14,11 +13,19 @@ import video from '../../../../Assets/video.mp4'
 
 const Top = () => {
 
-  const siswaData = SiswaProfile.getSiswaData();
+  const [siswaData, setSiswaData] = useState(null);
+  useEffect(() => {
+    const storedData = localStorage.getItem('siswaData');
+    if (storedData) {
+      setSiswaData(JSON.parse(storedData));
+    }
+  }, []);
+
   const namaSiswa = siswaData ? siswaData.nama : '';
   const nisnSiswa = siswaData ? siswaData.nisn : '';
-  const kelasSiswa = siswaData ? siswaData.kelas_id : '';
+  const kelasSiswa = siswaData ? siswaData.kode_kelas : '';
   const passwordSiswa = siswaData ? siswaData.password : '';
+  const waliKelasSiswa = siswaData ? siswaData.nama_guru : '';
 
   // pop up
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,13 +37,26 @@ const Top = () => {
     setIsModalOpen(false);
   };
 
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      borderRadius: '10px',
+      width: '300px',
+      height: '150px',
+    },
+  };  
+
 
   return (
     <div className="topSection">
       <div className="headerSection flex">
         <div className="title">
           <h1><span className="smaduTitle">Sistem Presensi SMAN 2 Cibitung.</span></h1>
-          {/* <p>Selamat datang, {SiswaProfile.getNisn()}!</p> */}
           <p>Selamat datang, {namaSiswa}</p>
         </div>
 
@@ -52,13 +72,14 @@ const Top = () => {
             <img src={img} alt="Admin Image" onClick={openModal}/>
           </div>
         </div>
-        <Modal isOpen={isModalOpen} onRequestClose={closeModal}>
+        <Modal isOpen={isModalOpen} onRequestClose={closeModal} style={customStyles}>
           <h2>Data Siswa</h2>
+          {/* <button onClick={closeModal}>Tutup</button> */}
           <p>Nama: {namaSiswa}</p>
           <p>NISN: {nisnSiswa}</p>
           <p>Kelas: {kelasSiswa}</p>
           <p>Password: {passwordSiswa}</p>
-          <button onClick={closeModal}>Tutup</button>
+          <p>Wali Kelas: {waliKelasSiswa}</p>
         </Modal>
       </div>
 

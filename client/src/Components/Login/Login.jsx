@@ -29,7 +29,7 @@ const Login = () => {
             }
             else {
                 const siswaData = response.data[0]
-                localStorage.setItem('siswaData', JSON.stringify(siswaData))
+                SiswaProfile.setSiswaData(siswaData);
                 console.log('Login Succesfully!')
                 navigateTo('/dashboard')
             }
