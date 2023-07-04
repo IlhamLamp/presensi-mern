@@ -10,8 +10,9 @@ const Sidebar = () => {
   const handleLogout = () => {
     const confirmLogout = window.confirm('Yakin ingin logout?');
     if (confirmLogout) {
-      // Logika logout
+      localStorage.removeItem('siswaData')
       window.location.href = '/';
+      // axios.post('/logout');
     } else {
       // Tidak melakukan apa-apa
     }

@@ -1,10 +1,17 @@
 // Our Dependecies
 const express = require('express');
+const session = require('express-session');
 const app = express();
+const APP_KEY = '私といるより楽しまないで'
 const mysql = require('mysql');
 const cors = require('cors');
 
 app.use(express.json());
+app.use(session({
+    secret: APP_KEY,
+    resave: false,
+    saveUninitialized: false
+}));
 app.use(cors());
 
 // Let us run the server. So its running
@@ -20,6 +27,7 @@ const db = mysql.createConnection({
     database: 'sekolahdb',
 })
 
+// register
 app.post('/register', (req, res) => {
     const sentNisn = req.body.Nisn
     const sentNama = req.body.Nama
@@ -42,7 +50,7 @@ app.post('/register', (req, res) => {
     })
 })
 
-
+// login
 app.post('/login', (req, res) => {
     const sentloginNisn = req.body.LoginNisn
     const sentLoginPassword = req.body.LoginPassword
@@ -65,6 +73,7 @@ app.post('/login', (req, res) => {
     })
 })
 
+// guru
 app.post('/guru', (req, res) => {
     const sentLoginNip = req.body.LoginNip
     const sentLoginPassword = req.body.LoginPassword
@@ -79,10 +88,47 @@ app.post('/guru', (req, res) => {
             res.send({error: err})
         }
         if(results.length > 0) {
-            res.send(results)
+            const guruId = results[0].id
+            req.session.guru_id = guruId
+
+            // save
+            const sessionSQL = 'INSERT INTO sessions_guru(id, guru_id, created_at) VALUES (?, ?, CURRENT_TIMESTAMP)'
+            const sessionValues = [req.sessionID, guruId];
+            db.query(sessionSQL, sessionValues, (sessionErr, sessionResult) => {
+                if (sessionErr) {
+                    res.send({error: sessionErr});
+                } else {
+                    res.send({guruId: guruId, results: results})
+                }
+            })
         }
         else{
             res.send({message: `Credentials Guru Don't Match!`})
         }
     })
 })
+
+app.post('/logout', (req, res) => {
+    // Check if session exists
+    if (req.session.guru_id) {
+        const deleteSessionSQL = 'DELETE FROM sessions_guru WHERE guru_id = ?';
+        const guruID = req.session.guru_id;
+        db.query(deleteSessionSQL, guruID, (sessionErr, sessionResult) => {
+            if (sessionErr) {
+                res.send({ error: sessionErr });
+            } else {
+                // Destroy the session
+                req.session.destroy(err => {
+                    if (err) {
+                    console.log(err);
+                    // Penanganan kesalahan saat menghapus sesi
+                    res.status(500).send({ error: 'Failed to destroy session' });
+                    } else {
+                    // Sesukses logout
+                    res.status(200).send({ message: 'Logout successful' });
+                    }
+                })
+            }
+        }) 
+    }
+});

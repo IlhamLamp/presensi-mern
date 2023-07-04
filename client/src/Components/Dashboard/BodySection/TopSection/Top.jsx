@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Top.css'
+import SiswaProfile from '../../../SiswaProfile'
 // import { BiSearchAlt } from 'react-icons/bi'
 // import { TbMessageCircle } from 'react-icons/tb'
 import { MdOutlineNotificationsNone } from 'react-icons/md'
 import { BsArrowRightShort, BsQuestionCircle } from 'react-icons/bs'
+import Modal from 'react-modal'
 import Clock from './Clock'
 import img from '../../../../Assets/user.png'
 import img2 from '../../../../Assets/achievement.png'
@@ -11,12 +13,31 @@ import video from '../../../../Assets/video.mp4'
 // import Zenitsu from '../../../../Assets/hello.gif'
 
 const Top = () => {
+
+  const siswaData = SiswaProfile.getSiswaData();
+  const namaSiswa = siswaData ? siswaData.nama : '';
+  const nisnSiswa = siswaData ? siswaData.nisn : '';
+  const kelasSiswa = siswaData ? siswaData.kelas_id : '';
+  const passwordSiswa = siswaData ? siswaData.password : '';
+
+  // pop up
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+  
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+
   return (
     <div className="topSection">
       <div className="headerSection flex">
         <div className="title">
           <h1><span className="smaduTitle">Sistem Presensi SMAN 2 Cibitung.</span></h1>
-          <p>Selamat datang, User!</p>
+          {/* <p>Selamat datang, {SiswaProfile.getNisn()}!</p> */}
+          <p>Selamat datang, {namaSiswa}</p>
         </div>
 
         {/* <div className="searchBar flex">
@@ -28,10 +49,17 @@ const Top = () => {
           {/* <TbMessageCircle className="icon" /> */}
           <MdOutlineNotificationsNone className="icon" />
           <div className="adminImage">
-            <img src={img} alt="Admin Image" />
+            <img src={img} alt="Admin Image" onClick={openModal}/>
           </div>
         </div>
-
+        <Modal isOpen={isModalOpen} onRequestClose={closeModal}>
+          <h2>Data Siswa</h2>
+          <p>Nama: {namaSiswa}</p>
+          <p>NISN: {nisnSiswa}</p>
+          <p>Kelas: {kelasSiswa}</p>
+          <p>Password: {passwordSiswa}</p>
+          <button onClick={closeModal}>Tutup</button>
+        </Modal>
       </div>
 
       <div className="cardSection flex">

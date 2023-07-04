@@ -27,7 +27,8 @@ const LoginGuru = () => {
                 setLoginStatus(`Nip atau password salah!`)
             }
             else {
-                console.log ('Login Succesfully!')
+                const guruId = response.data.guru_id
+                console.log ('Login Succesfully!', guruId)
                 navigateTo('/dashboard')
             }
         })

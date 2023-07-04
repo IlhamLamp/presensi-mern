@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../../App.css'
+import SiswaProfile from '../SiswaProfile';
 import { Link, useNavigate } from 'react-router-dom';
 import Axios from 'axios'
 import video from '../../Assets/video.mp4'
@@ -7,8 +8,6 @@ import logo from '../../Assets/logo-sekolah.png'
 import { FaUserShield } from 'react-icons/fa'
 import { BsFillShieldLockFill } from 'react-icons/bs'
 import { AiOutlineSwapRight } from 'react-icons/ai'
-
-
 
 const Login = () => {
     const [loginNisn, setLoginNisn] = useState('');
@@ -29,6 +28,8 @@ const Login = () => {
                 setLoginStatus(`Nisn atau password salah!`)
             }
             else {
+                const siswaData = response.data[0]
+                localStorage.setItem('siswaData', JSON.stringify(siswaData))
                 console.log('Login Succesfully!')
                 navigateTo('/dashboard')
             }

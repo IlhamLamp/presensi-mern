@@ -45,6 +45,9 @@ const router = createBrowserRouter([
     path: '/dashboard/data-siswa',
     element: <div><DataSiswa/></div>
   },
+  {
+    path: '/logout',
+  }
 ])
 
 function App() {
