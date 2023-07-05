@@ -56,7 +56,6 @@ app.post('/login', (req, res) => {
     const sentLoginPassword = req.body.LoginPassword
 
     // Lets create SQL statement to insert the user to the Database table Users
-    // const SQL = 'SELECT * FROM siswa WHERE nisn = ? && password = ?'
     const SQL = `SELECT siswa.*, kelas.kode_kelas, guru.nama AS nama_guru FROM siswa 
                 INNER JOIN kelas ON siswa.kelas_id = kelas.id 
                 INNER JOIN guru ON kelas.guru_id = guru.id 
@@ -84,7 +83,10 @@ app.post('/guru', (req, res) => {
     const sentLoginPassword = req.body.LoginPassword
 
     // SQL Statement
-    const SQL = 'SELECT * FROM guru WHERE nip = ? && password = ?'
+    const SQL = `SELECT guru.*, kelas.kode_kelas FROM guru 
+                INNER JOIN kelas ON guru.kelas_id = kelas.id
+                WHERE guru.nip = ? AND guru.password = ?`
+    ;
     const Values = [sentLoginNip, sentLoginPassword]
 
     // Query
@@ -93,19 +95,7 @@ app.post('/guru', (req, res) => {
             res.send({error: err})
         }
         if(results.length > 0) {
-            const guruId = results[0].id
-            req.session.guru_id = guruId
-
-            // save
-            const sessionSQL = 'INSERT INTO sessions_guru(id, guru_id, created_at) VALUES (?, ?, CURRENT_TIMESTAMP)'
-            const sessionValues = [req.sessionID, guruId];
-            db.query(sessionSQL, sessionValues, (sessionErr, sessionResult) => {
-                if (sessionErr) {
-                    res.send({error: sessionErr});
-                } else {
-                    res.send({guruId: guruId, results: results})
-                }
-            })
+            res.send(results)
         }
         else{
             res.send({message: `Credentials Guru Don't Match!`})

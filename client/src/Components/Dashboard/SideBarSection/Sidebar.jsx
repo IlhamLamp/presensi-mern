@@ -11,6 +11,7 @@ const Sidebar = () => {
     const confirmLogout = window.confirm('Yakin ingin logout?');
     if (confirmLogout) {
       localStorage.removeItem('siswaData')
+      localStorage.removeItem('guruData')
       window.location.href = '/';
       // axios.post('/logout');
     } else {

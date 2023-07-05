@@ -14,18 +14,33 @@ import video from '../../../../Assets/video.mp4'
 const Top = () => {
 
   const [siswaData, setSiswaData] = useState(null);
+  const [guruData, setGuruData] = useState(null);
   useEffect(() => {
-    const storedData = localStorage.getItem('siswaData');
-    if (storedData) {
-      setSiswaData(JSON.parse(storedData));
+    // siswa
+    const storedDataSiswa = localStorage.getItem('siswaData');
+    if (storedDataSiswa) {
+      setSiswaData(JSON.parse(storedDataSiswa));
+    }
+    // guru
+    const storedDataGuru = localStorage.getItem('guruData');
+    if (storedDataGuru) {
+      setGuruData(JSON.parse(storedDataGuru));
     }
   }, []);
 
+  // siswa
   const namaSiswa = siswaData ? siswaData.nama : '';
   const nisnSiswa = siswaData ? siswaData.nisn : '';
   const kelasSiswa = siswaData ? siswaData.kode_kelas : '';
   const passwordSiswa = siswaData ? siswaData.password : '';
   const waliKelasSiswa = siswaData ? siswaData.nama_guru : '';
+
+  // guru
+  const namaGuru = guruData ? guruData.nama : '';
+  const nipGuru = guruData ? guruData.nip : '';
+  const kelasGuru = guruData ? guruData.kode_kelas : '';
+  const passwordGuru = guruData ? guruData.password : '';
+  // const waliKelasSiswa = guruData ? guruData.nama_guru : '';
 
   // pop up
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -57,7 +72,7 @@ const Top = () => {
       <div className="headerSection flex">
         <div className="title">
           <h1><span className="smaduTitle">Sistem Presensi SMAN 2 Cibitung.</span></h1>
-          <p>Selamat datang, {namaSiswa}</p>
+          <p>Selamat datang, {namaSiswa || namaGuru}</p>
         </div>
 
         {/* <div className="searchBar flex">
@@ -73,13 +88,13 @@ const Top = () => {
           </div>
         </div>
         <Modal isOpen={isModalOpen} onRequestClose={closeModal} style={customStyles}>
-          <h2>Data Siswa</h2>
+          <h2>Profil Data</h2>
           {/* <button onClick={closeModal}>Tutup</button> */}
-          <p>Nama: {namaSiswa}</p>
-          <p>NISN: {nisnSiswa}</p>
-          <p>Kelas: {kelasSiswa}</p>
-          <p>Password: {passwordSiswa}</p>
-          <p>Wali Kelas: {waliKelasSiswa}</p>
+          <p>Nama: {namaSiswa ? namaSiswa : namaGuru}</p>
+          <p>NISN: {nisnSiswa ? nisnSiswa : nipGuru}</p>
+          <p>Kelas: {kelasSiswa ? kelasSiswa : kelasGuru}</p>
+          <p>Password: {passwordSiswa ? passwordSiswa : passwordGuru}</p>
+          <p>Wali Kelas: {waliKelasSiswa ? waliKelasSiswa : ''}</p>
         </Modal>
       </div>
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../../App.css'
+import GuruProfile from '../GuruProfile';
 import { Link, useNavigate } from 'react-router-dom';
 import Axios from 'axios'
 import video from '../../Assets/video.mp4'
@@ -27,8 +28,9 @@ const LoginGuru = () => {
                 setLoginStatus(`Nip atau password salah!`)
             }
             else {
-                const guruId = response.data.guru_id
-                console.log ('Login Succesfully!', guruId)
+                const guruData = response.data[0]
+                GuruProfile.setGuruData(guruData)
+                console.log ('Login Succesfully!')
                 navigateTo('/dashboard')
             }
         })
